@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "slices=7": {
+      "model": "modid:block/carrot_cake_slices7"
+    },
+    "slices=6": {
+      "model": "modid:block/carrot_cake_slices6"
+    },
+    "slices=5": {
+      "model": "modid:block/carrot_cake_slices5"
+    },
+    "slices=4": {
+      "model": "modid:block/carrot_cake_slices4"
+    },
+    "slices=3": {
+      "model": "modid:block/carrot_cake_slices3"
+    },
+    "slices=2": {
+      "model": "modid:block/carrot_cake_slices2"
+    },
+    "slices=1": {
+      "model": "modid:block/carrot_cake_slices1"
+    }
+  }
+}
