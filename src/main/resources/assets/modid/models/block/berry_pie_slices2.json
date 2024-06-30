@@ -1,0 +1,10 @@
+{
+    "parent": "modid:block/template_pie_slices2",
+    "textures": {
+        "particle": "modid:block/berry_pie_side",
+        "bottom": "modid:block/berry_pie_bottom",
+        "top": "modid:block/berry_pie_top",
+        "side": "modid:block/berry_pie_side",
+        "inside": "modid:block/berry_pie_inner"
+    }
+}

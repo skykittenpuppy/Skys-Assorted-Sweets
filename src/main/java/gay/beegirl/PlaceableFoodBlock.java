@@ -28,10 +28,14 @@ public class PlaceableFoodBlock extends Block {
     public static final IntProperty SLICES = IntProperty.of("slices", 1, 32);
     protected VoxelShape[] BITES_TO_SHAPE;
     public int MAX_BITES;
+    public int HUNGER;
+    public float SATURATION;
 
-    public PlaceableFoodBlock(AbstractBlock.Settings settings, int MAX_BITES, VoxelShape[] BITES_TO_SHAPE) {
+    public PlaceableFoodBlock(AbstractBlock.Settings settings, int MAX_BITES, int HUNGER, float SATURATION, VoxelShape[] BITES_TO_SHAPE) {
         super(settings);
         this.MAX_BITES = MAX_BITES;
+        this.HUNGER = HUNGER;
+        this.SATURATION = SATURATION;
         this.BITES_TO_SHAPE = BITES_TO_SHAPE;
         this.setDefaultState((this.stateManager.getDefaultState()).with(SLICES, MAX_BITES));
     }
@@ -43,9 +47,8 @@ public class PlaceableFoodBlock extends Block {
     protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         Item item = stack.getItem();
         if (stack.isIn(ItemTags.CANDLES) && state.get(SLICES) == MAX_BITES) {
-            Block var10 = Block.getBlockFromItem(item);
-            if (var10 instanceof CandleBlock) {
-                CandleBlock candleBlock = (CandleBlock)var10;
+            Block block = Block.getBlockFromItem(item);
+            if (block instanceof CandleBlock candleBlock) {
                 stack.decrementUnlessCreative(1, player);
                 world.playSound(null, pos, SoundEvents.BLOCK_CAKE_ADD_CANDLE, SoundCategory.BLOCKS, 1.0F, 1.0F);
                 world.setBlockState(pos, CandleCakeBlock.getCandleCakeFromCandle(candleBlock));
@@ -77,11 +80,11 @@ public class PlaceableFoodBlock extends Block {
             return ActionResult.PASS;
         } else {
             player.incrementStat(Stats.EAT_CAKE_SLICE);
-            player.getHungerManager().add(2, 0.1F);
+            player.getHungerManager().add(HUNGER, SATURATION);
             int i = state.get(SLICES);
             world.emitGameEvent(player, GameEvent.EAT, pos);
             if (i-1 > 0) {
-                world.setBlockState(pos, (BlockState)state.with(SLICES, i - 1), 3);
+                world.setBlockState(pos, state.with(SLICES, i - 1), 3);
             } else {
                 world.removeBlock(pos, false);
                 world.emitGameEvent(player, GameEvent.BLOCK_DESTROY, pos);

@@ -1,25 +1,60 @@
 {
-  "variants": {
-    "slices=7": {
-      "model": "modid:block/carrot_cake_slices7"
+  "multipart": [
+    {
+      "apply": {
+        "model": "modid:block/carrot_cake_slices1"
+      },
+      "when": {
+        "slices": "1|2|3|4|5|6|7"
+      }
     },
-    "slices=6": {
-      "model": "modid:block/carrot_cake_slices6"
+    {
+      "apply": {
+        "model": "modid:block/carrot_cake_slices2"
+      },
+      "when": {
+        "slices": "2|3|4|5|6|7"
+      }
     },
-    "slices=5": {
-      "model": "modid:block/carrot_cake_slices5"
+    {
+      "apply": {
+        "model": "modid:block/carrot_cake_slices3"
+      },
+      "when": {
+        "slices": "3|4|5|6|7"
+      }
     },
-    "slices=4": {
-      "model": "modid:block/carrot_cake_slices4"
+    {
+      "apply": {
+        "model": "modid:block/carrot_cake_slices4"
+      },
+      "when": {
+        "slices": "4|5|6|7"
+      }
     },
-    "slices=3": {
-      "model": "modid:block/carrot_cake_slices3"
+    {
+      "apply": {
+        "model": "modid:block/carrot_cake_slices5"
+      },
+      "when": {
+        "slices": "5|6|7"
+      }
     },
-    "slices=2": {
-      "model": "modid:block/carrot_cake_slices2"
+    {
+      "apply": {
+        "model": "modid:block/carrot_cake_slices6"
+      },
+      "when": {
+        "slices": "6|7"
+      }
     },
-    "slices=1": {
-      "model": "modid:block/carrot_cake_slices1"
+    {
+      "apply": {
+        "model": "modid:block/carrot_cake_slices7"
+      },
+      "when": {
+        "slices": "7"
+      }
     }
-  }
+  ]
 }

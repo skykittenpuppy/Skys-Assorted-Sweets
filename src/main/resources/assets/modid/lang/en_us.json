@@ -1,0 +1,15 @@
+{
+  "itemGroup.modid.foods": "MCMod Foods",
+  "itemGroup.modid.ingredients": "MCMod Ingredients",
+
+  "block.modid.sponge_cake": "Sponge Cake",
+  "block.modid.chocolate_cake": "Chocolate Cake",
+  "block.modid.carrot_cake": "Carrot Cake",
+  "block.modid.pumpkin_pie": "Pumpkin Pie",
+  "block.modid.apple_pie": "Apple Pie",
+  "block.modid.berry_pie": "Mixed Berry Pie",
+  "block.modid.pancakes": "Pancakes",
+  "block.modid.treacle_tart": "Treacle Tart",
+
+  "item.modid.breadcrumbs": "Breadcrumbs"
+}
