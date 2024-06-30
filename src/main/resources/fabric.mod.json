@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+          "gay.beegirl.ExampleMod"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+          "gay.beegirl.ExampleModClient"
 		]
 	},
 	"mixins": [

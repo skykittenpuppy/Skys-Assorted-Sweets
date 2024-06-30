@@ -1,4 +1,4 @@
-package com.example;
+package gay.beegirl;
 
 import net.fabricmc.api.ClientModInitializer;
 
