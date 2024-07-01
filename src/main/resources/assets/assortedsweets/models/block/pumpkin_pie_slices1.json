@@ -1,0 +1,10 @@
+{
+    "parent": "assortedsweets:block/template_pie_slices1",
+    "textures": {
+        "particle": "assortedsweets:block/pumpkin_pie_side",
+        "bottom": "assortedsweets:block/pumpkin_pie_bottom",
+        "top": "assortedsweets:block/pumpkin_pie_top",
+        "side": "assortedsweets:block/pumpkin_pie_side",
+        "inside": "assortedsweets:block/pumpkin_pie_inner"
+    }
+}

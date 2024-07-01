@@ -1,0 +1,36 @@
+{
+  "itemGroup.assortedsweets.foods": "Sky's Assorted Foods",
+  "itemGroup.assortedsweets.drinks": "Sky's Assorted Drinks",
+  "itemGroup.assortedsweets.ingredients": "Sky's Assorted Ingredients",
+
+  "entity.assortedsweets.tuna": "Tuna",
+
+  "block.assortedsweets.sponge_cake": "Sponge Cake",
+  "block.assortedsweets.chocolate_cake": "Chocolate Cake",
+  "block.assortedsweets.red_velvet_cake": "Red Velvet Cake",
+  "block.assortedsweets.carrot_cake": "Carrot Cake",
+  "block.assortedsweets.pumpkin_pie": "Pumpkin Pie",
+  "block.assortedsweets.apple_pie": "Apple Pie",
+  "block.assortedsweets.berry_pie": "Mixed Berry Pie",
+  "block.assortedsweets.pancakes": "Pancakes",
+  "block.assortedsweets.treacle_tart": "Treacle Tart",
+  "block.assortedsweets.flan": "Flan",
+  "block.assortedsweets.sour_berry_bush": "Sour Berry Bush",
+
+  "item.assortedsweets.flesh_jerky": "\"Flesh\" Jerky",
+  "item.assortedsweets.breadcrumbs": "Breadcrumbs",
+  "item.assortedsweets.custard": "Custard",
+  "item.assortedsweets.sour_berries": "Sour Berries",
+  "item.assortedsweets.sweet_berry_juice": "Sweet Berry Juice",
+  "item.assortedsweets.sweet_wine": "Sweet Wine",
+  "item.assortedsweets.sour_berry_juice": "Sour Berry Juice",
+  "item.assortedsweets.sour_wine": "Sour Wine",
+  "item.assortedsweets.glow_berry_juice": "Glow Berry Juice",
+  "item.assortedsweets.glow_berry_wine": "Glow Berry Wine",
+  "item.assortedsweets.tuna_bucket": "Bucket of Tuna",
+  "item.assortedsweets.tuna_spawn_egg": "Tuna Spawn Egg",
+
+  "subtitles.entity.tuna.death": "Tuna dies",
+  "subtitles.entity.tuna.flop": "Tuna flops",
+  "subtitles.entity.tuna.hurt": "Tuna hurts"
+}

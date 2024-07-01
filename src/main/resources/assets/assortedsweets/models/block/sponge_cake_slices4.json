@@ -1,0 +1,10 @@
+{
+    "parent": "assortedsweets:block/template_cake_slices4",
+    "textures": {
+        "particle": "assortedsweets:block/sponge_cake_side",
+        "bottom": "assortedsweets:block/sponge_cake_bottom",
+        "top": "assortedsweets:block/sponge_cake_top",
+        "side": "assortedsweets:block/sponge_cake_side",
+        "inside": "assortedsweets:block/sponge_cake_inner"
+    }
+}

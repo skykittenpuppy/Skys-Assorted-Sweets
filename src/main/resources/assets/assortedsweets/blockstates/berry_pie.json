@@ -1,0 +1,36 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "assortedsweets:block/berry_pie_slices1"
+      },
+      "when": {
+        "slices": "1|2|3|4"
+      }
+    },
+    {
+      "apply": {
+        "model": "assortedsweets:block/berry_pie_slices2"
+      },
+      "when": {
+        "slices": "2|3|4"
+      }
+    },
+    {
+      "apply": {
+        "model": "assortedsweets:block/berry_pie_slices3"
+      },
+      "when": {
+        "slices": "3|4"
+      }
+    },
+    {
+      "apply": {
+        "model": "assortedsweets:block/berry_pie_slices4"
+      },
+      "when": {
+        "slices": "4"
+      }
+    }
+  ]
+}

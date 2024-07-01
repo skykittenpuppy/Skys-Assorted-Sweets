@@ -1,0 +1,10 @@
+{
+    "parent": "assortedsweets:block/template_cake_slices6",
+    "textures": {
+        "particle": "assortedsweets:block/carrot_cake_side",
+        "bottom": "assortedsweets:block/carrot_cake_bottom",
+        "top": "assortedsweets:block/carrot_cake_top",
+        "side": "assortedsweets:block/carrot_cake_side",
+        "inside": "assortedsweets:block/carrot_cake_inner"
+    }
+}

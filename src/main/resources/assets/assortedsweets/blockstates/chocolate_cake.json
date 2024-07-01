@@ -1,0 +1,60 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "assortedsweets:block/chocolate_cake_slices1"
+      },
+      "when": {
+        "slices": "1|2|3|4|5|6|7"
+      }
+    },
+    {
+      "apply": {
+        "model": "assortedsweets:block/chocolate_cake_slices2"
+      },
+      "when": {
+        "slices": "2|3|4|5|6|7"
+      }
+    },
+    {
+      "apply": {
+        "model": "assortedsweets:block/chocolate_cake_slices3"
+      },
+      "when": {
+        "slices": "3|4|5|6|7"
+      }
+    },
+    {
+      "apply": {
+        "model": "assortedsweets:block/chocolate_cake_slices4"
+      },
+      "when": {
+        "slices": "4|5|6|7"
+      }
+    },
+    {
+      "apply": {
+        "model": "assortedsweets:block/chocolate_cake_slices5"
+      },
+      "when": {
+        "slices": "5|6|7"
+      }
+    },
+    {
+      "apply": {
+        "model": "assortedsweets:block/chocolate_cake_slices6"
+      },
+      "when": {
+        "slices": "6|7"
+      }
+    },
+    {
+      "apply": {
+        "model": "assortedsweets:block/chocolate_cake_slices7"
+      },
+      "when": {
+        "slices": "7"
+      }
+    }
+  ]
+}
