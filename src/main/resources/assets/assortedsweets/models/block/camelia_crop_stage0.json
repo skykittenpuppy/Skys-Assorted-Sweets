@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "assortedsweets:block/camelia_crop_stage0"
+  }
+}

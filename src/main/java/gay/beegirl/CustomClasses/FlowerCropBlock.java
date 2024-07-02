@@ -17,12 +17,10 @@ public class FlowerCropBlock extends CropBlock {
     public static final IntProperty AGE;
     private static final VoxelShape[] SHAPES;
     public Block result;
-    public Item seedItem;
 
     public FlowerCropBlock(AbstractBlock.Settings settings, Block result, Item seedItem) {
         super(settings);
         this.result = result;
-        this.seedItem = seedItem; //Why are you null????
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
@@ -42,7 +40,7 @@ public class FlowerCropBlock extends CropBlock {
     }
 
     protected ItemConvertible getSeedsItem() {
-        return seedItem;
+        return this.asItem();
     }
 
     public BlockState withAge(int age) {

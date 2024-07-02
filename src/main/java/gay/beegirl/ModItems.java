@@ -39,5 +39,9 @@ public class ModItems {
     public static final Item GLOW_BERRY_WINE = registerItem("glow_berry_wine", new Item(new Item.Settings()));
     public static final Item TUNA_BUCKET = registerItem("tuna_bucket", new EntityBucketItem(ModEntities.TUNA, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().maxCount(1).component(DataComponentTypes.BUCKET_ENTITY_DATA, NbtComponent.DEFAULT)));
     public static final Item TUNA_SPAWN_EGG = registerItem("tuna_spawn_egg", new SpawnEggItem(ModEntities.TUNA, 0, 0, new Item.Settings()));
-    public static final Item TORCHFLOWER_SEEDS = registerItem("torchflower_seeds", new AliasedBlockItem(ModBlocks.TORCHFLOWER_CROP, new Item.Settings()));
+    public static final Item NIGHTSHADE_SEEDS = registerItem("nightshade_seeds", new AliasedBlockItem(ModBlocks.NIGHTSHADE_CROP, new Item.Settings()));
+    public static final Item CAMELIA_SEEDS = registerItem("camelia_seeds", new AliasedBlockItem(ModBlocks.CAMELIA_CROP, new Item.Settings()));
+    public static final Item LAVENDER_SEEDS = registerItem("lavender_seeds", new AliasedBlockItem(ModBlocks.LAVENDER_CROP, new Item.Settings()));
+    public static final Item VANILLA = registerItem("vanilla", new Item(new Item.Settings()));
+    public static final Item VANILLA_SEEDS = registerItem("vanilla_seeds", new AliasedBlockItem(ModBlocks.VANILLA_CROP, new Item.Settings()));
 }

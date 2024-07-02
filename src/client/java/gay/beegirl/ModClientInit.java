@@ -13,12 +13,20 @@ import net.minecraft.util.Identifier;
 public class ModClientInit implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		ModInit.LOGGER.info("Setting Render Layers");
-
+		ModInit.LOGGER.info("Setting Block Render Settings");
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SOUR_BERRY_BUSH, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NIGHTSHADE, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NIGHTSHADE_CROP, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_NIGHTSHADE, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMELIA, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAMELIA_CROP, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_CAMELIA, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LAVENDER, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LAVENDER_CROP, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_LAVENDER, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.VANILLA_CROP, RenderLayer.getCutout());
 
-		ModInit.LOGGER.info("Setting Entity Renderers");
-
+		ModInit.LOGGER.info("Setting Entity Render Settings");
 		EntityRendererRegistry.register(ModEntities.TUNA, TunaEntityRenderer::new);
 		EntityModelLayerRegistry.registerModelLayer(TUNA, TunaEntityModel::getTexturedModelData);
 	}

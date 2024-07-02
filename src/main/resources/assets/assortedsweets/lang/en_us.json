@@ -2,6 +2,7 @@
   "itemGroup.assortedsweets.foods": "Sky's Assorted Foods",
   "itemGroup.assortedsweets.drinks": "Sky's Assorted Drinks",
   "itemGroup.assortedsweets.ingredients": "Sky's Assorted Ingredients",
+  "itemGroup.assortedsweets.crops": "Sky's Assorted Crops",
 
   "entity.assortedsweets.tuna": "Tuna",
 
@@ -16,6 +17,16 @@
   "block.assortedsweets.treacle_tart": "Treacle Tart",
   "block.assortedsweets.flan": "Flan",
   "block.assortedsweets.sour_berry_bush": "Sour Berry Bush",
+  "block.assortedsweets.nightshade": "Nightshade",
+  "block.assortedsweets.nightshade_crop": "Nightshade Crop",
+  "block.assortedsweets.potted_nightshade": "Potted Nightshade",
+  "block.assortedsweets.camelia": "Camelia",
+  "block.assortedsweets.camelia_crop": "Camelia Crop",
+  "block.assortedsweets.potted_camelia": "Potted Camelia",
+  "block.assortedsweets.lavender": "Lavender",
+  "block.assortedsweets.lavender_crop": "Lavender Crop",
+  "block.assortedsweets.potted_lavender": "Potted Lavender",
+  "block.assortedsweets.vanilla_crop": "Vanilla Crop",
 
   "item.assortedsweets.flesh_jerky": "\"Flesh\" Jerky",
   "item.assortedsweets.breadcrumbs": "Breadcrumbs",
@@ -29,6 +40,11 @@
   "item.assortedsweets.glow_berry_wine": "Glow Berry Wine",
   "item.assortedsweets.tuna_bucket": "Bucket of Tuna",
   "item.assortedsweets.tuna_spawn_egg": "Tuna Spawn Egg",
+  "item.assortedsweets.nightshade_seeds": "Nightshade Seeds",
+  "item.assortedsweets.camelia_seeds": "Camelia Seeds",
+  "item.assortedsweets.lavender_seeds": "Lavender Seeds",
+  "item.assortedsweets.vanilla": "Vanilla",
+  "item.assortedsweets.vanilla_seeds": "Vanilla Seeds",
 
   "subtitles.entity.tuna.death": "Tuna dies",
   "subtitles.entity.tuna.flop": "Tuna flops",

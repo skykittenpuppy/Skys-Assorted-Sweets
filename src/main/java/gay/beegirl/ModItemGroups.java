@@ -59,10 +59,17 @@ public class ModItemGroups {
         entries.add(ModItems.SOUR_BERRIES);
         entries.add(ModItems.BREADCRUMBS);
         entries.add(ModItems.CUSTARD);
+        entries.add(ModItems.VANILLA);
     });
-    public static final ItemGroup CROPS = registerItemGroup("crops", ModBlocks.TORCHFLOWER.asItem(), (displayContext, entries) -> {
-        entries.add(ModBlocks.TORCHFLOWER);
-        entries.add(ModItems.TORCHFLOWER_SEEDS);
+    public static final ItemGroup CROPS = registerItemGroup("crops", ModBlocks.NIGHTSHADE.asItem(), (displayContext, entries) -> {
+        entries.add(ModBlocks.NIGHTSHADE);
+        entries.add(ModItems.NIGHTSHADE_SEEDS);
+        entries.add(ModBlocks.CAMELIA);
+        entries.add(ModItems.CAMELIA_SEEDS);
+        entries.add(ModBlocks.LAVENDER);
+        entries.add(ModItems.LAVENDER_SEEDS);
+        entries.add(ModItems.VANILLA);
+        entries.add(ModItems.VANILLA_SEEDS);
         entries.add(ModItems.SOUR_BERRIES);
     });
 }
