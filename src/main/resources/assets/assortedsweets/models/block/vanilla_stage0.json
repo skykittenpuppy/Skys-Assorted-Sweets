@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/crop",
-  "textures": {
-    "crop": "assortedsweets:block/vanilla_stage0"
-  }
-}

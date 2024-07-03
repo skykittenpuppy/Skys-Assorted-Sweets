@@ -9,6 +9,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
+    private static int sortOrder = 0;
+
     public static void registerModItemGroups(){
         ModInit.LOGGER.info("Registering Item Groups");
         addItemsToVanillaGroups();
@@ -16,7 +18,7 @@ public class ModItemGroups {
     private static ItemGroup registerItemGroup(String name, Item icon, ItemGroup.EntryCollector entries){
         return Registry.register(
                 Registries.ITEM_GROUP,
-                Identifier.tryParse(ModInit.MOD_ID, name),
+                Identifier.tryParse(ModInit.MOD_ID, sortOrder++ + name),
                 FabricItemGroup.builder()
                         .displayName(Text.translatable("itemGroup."+ ModInit.MOD_ID+"."+name))
                         .icon(() -> new ItemStack(icon))

@@ -1,6 +1,7 @@
 package gay.beegirl.CustomClasses;
 
 import gay.beegirl.ModItems;
+import gay.beegirl.ModSoundEvents;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.passive.SchoolingFishEntity;
@@ -24,17 +25,21 @@ public class TunaEntity extends SchoolingFishEntity {
 
     protected SoundEvent getAmbientSound() {
         return SoundEvents.ENTITY_SALMON_AMBIENT;
+        //return ModSoundEvents.ENTITY_TUNA_AMBIENT;
     }
 
     protected SoundEvent getDeathSound() {
         return SoundEvents.ENTITY_SALMON_DEATH;
+        //return ModSoundEvents.ENTITY_TUNA_DEATH;
     }
 
     protected SoundEvent getHurtSound(DamageSource source) {
         return SoundEvents.ENTITY_SALMON_HURT;
+        //return ModSoundEvents.ENTITY_TUNA_HURT;
     }
 
     protected SoundEvent getFlopSound() {
         return SoundEvents.ENTITY_SALMON_FLOP;
+        //return ModSoundEvents.ENTITY_TUNA_FLOP;
     }
 }
