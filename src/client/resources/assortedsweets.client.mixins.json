@@ -3,6 +3,7 @@
 	"package": "gay.beegirl.mixin.client",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
+		"TorchflowerBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

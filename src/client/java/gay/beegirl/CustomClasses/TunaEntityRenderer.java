@@ -16,7 +16,7 @@ public class TunaEntityRenderer extends MobEntityRenderer<TunaEntity, TunaEntity
     private static final Identifier TEXTURE = Identifier.tryParse(ModInit.MOD_ID, "textures/entity/fish/tuna.png");
 
     public TunaEntityRenderer(EntityRendererFactory.Context context) {
-        super(context, new TunaEntityModel(context.getPart(ModClientInit.TUNA)), 0.4f);
+        super(context, new TunaEntityModel<>(context.getPart(ModClientInit.TUNA)), 0.4f);
     }
 
     public Identifier getTexture(TunaEntity entity) {

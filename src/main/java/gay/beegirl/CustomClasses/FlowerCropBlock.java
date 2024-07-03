@@ -16,11 +16,9 @@ import net.minecraft.world.World;
 public class FlowerCropBlock extends CropBlock {
     public static final IntProperty AGE;
     private static final VoxelShape[] SHAPES;
-    public Block result;
 
-    public FlowerCropBlock(AbstractBlock.Settings settings, Block result, Item seedItem) {
+    public FlowerCropBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.result = result;
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
@@ -43,10 +41,6 @@ public class FlowerCropBlock extends CropBlock {
         return this.asItem();
     }
 
-    public BlockState withAge(int age) {
-        return age == 2 ? result.getDefaultState() : super.withAge(age);
-    }
-
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (random.nextInt(3) != 0) {
             super.randomTick(state, world, pos, random);
@@ -59,7 +53,11 @@ public class FlowerCropBlock extends CropBlock {
     }
 
     static {
-        AGE = Properties.AGE_1;
-        SHAPES = new VoxelShape[]{Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 6.0, 11.0), Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 10.0, 11.0)};
+        AGE = Properties.AGE_2;
+        SHAPES = new VoxelShape[]{
+                Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 6.0, 11.0),
+                Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 10.0, 11.0),
+                Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 10.0, 11.0)
+        };
     }
 }

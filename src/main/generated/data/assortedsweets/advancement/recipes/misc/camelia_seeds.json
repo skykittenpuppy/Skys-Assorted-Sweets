@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_camelia": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedsweets:camelia"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_camelia_seeds": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedsweets:camelia_seeds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:camelia_seeds"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_camelia",
+      "has_camelia_seeds"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:camelia_seeds"
+    ]
+  }
+}

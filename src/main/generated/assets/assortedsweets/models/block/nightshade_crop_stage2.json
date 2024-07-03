@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "assortedsweets:block/nightshade_crop_stage2"
+  }
+}

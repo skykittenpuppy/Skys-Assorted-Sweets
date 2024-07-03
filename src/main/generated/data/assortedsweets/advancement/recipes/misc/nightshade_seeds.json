@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nightshade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedsweets:nightshade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_nightshade_seeds": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedsweets:nightshade_seeds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:nightshade_seeds"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nightshade",
+      "has_nightshade_seeds"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:nightshade_seeds"
+    ]
+  }
+}

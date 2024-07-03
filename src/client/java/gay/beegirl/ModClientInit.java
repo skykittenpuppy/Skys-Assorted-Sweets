@@ -11,6 +11,8 @@ import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
 
 public class ModClientInit implements ClientModInitializer {
+	public static final EntityModelLayer TUNA = new EntityModelLayer(Identifier.tryParse(ModInit.MOD_ID,"tuna"), "main");
+
 	@Override
 	public void onInitializeClient() {
 		ModInit.LOGGER.info("Setting Block Render Settings");
@@ -30,6 +32,4 @@ public class ModClientInit implements ClientModInitializer {
 		EntityRendererRegistry.register(ModEntities.TUNA, TunaEntityRenderer::new);
 		EntityModelLayerRegistry.registerModelLayer(TUNA, TunaEntityModel::getTexturedModelData);
 	}
-
-	public static final EntityModelLayer TUNA = new EntityModelLayer(Identifier.tryParse(ModInit.MOD_ID,"tuna"), "main");
 }
