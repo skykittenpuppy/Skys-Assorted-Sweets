@@ -28,6 +28,8 @@
   "block.assortedsweets.lavender_crop": "Lavender Crop",
   "block.assortedsweets.potted_lavender": "Potted Lavender",
   "block.assortedsweets.vanilla_crop": "Vanilla Crop",
+  "block.assortedsweets.ruby_ore": "Ruby Ore",
+  "block.assortedsweets.deepslate_ruby_ore": "Deepslate Ruby Ore",
 
   "item.assortedsweets.flesh_jerky": "\"Flesh\" Jerky",
   "item.assortedsweets.breadcrumbs": "Breadcrumbs",
@@ -46,6 +48,7 @@
   "item.assortedsweets.lavender_seeds": "Lavender Seeds",
   "item.assortedsweets.vanilla": "Vanilla",
   "item.assortedsweets.vanilla_seeds": "Vanilla Seeds",
+  "item.assortedsweets.ruby": "Ruby",
 
   "subtitles.entity.tuna.death": "Tuna dies",
   "subtitles.entity.tuna.flop": "Tuna flops",

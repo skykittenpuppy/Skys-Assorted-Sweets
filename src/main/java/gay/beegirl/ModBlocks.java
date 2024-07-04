@@ -163,4 +163,7 @@ public class ModBlocks {
     public static final Block LAVENDER_CROP = registerBlock("lavender_crop", new FlowerCropBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)), false);
     public static final Block POTTED_LAVENDER = registerBlock("potted_lavender", new FlowerPotBlock(LAVENDER, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY)), false);
     public static final Block VANILLA_CROP = registerBlock("vanilla_crop", new ModCropBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)), false);
+
+    public static final Block RUBY_ORE = registerBlock("ruby_ore", new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE)), true);
+    public static final Block DEEPSLATE_RUBY_ORE = registerBlock("deepslate_ruby_ore", new Block(AbstractBlock.Settings.copy(Blocks.DEEPSLATE_DIAMOND_ORE)), true);
 }

@@ -30,6 +30,10 @@ public class ModItems {
     public static final Item BREADCRUMBS = registerItem("breadcrumbs", new Item(new Item.Settings()));
     public static final Item CUSTARD = registerItem("custard", new Item(new Item.Settings()));
     public static final Item FLESH_JERKY = registerItem("flesh_jerky", new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(2).saturationModifier(0).snack().build())));
+    public static final Item TUNA = registerItem("tuna", new Item(new Item.Settings()));
+    public static final Item TUNA_BUCKET = registerItem("tuna_bucket", new EntityBucketItem(ModEntities.TUNA, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().maxCount(1).component(DataComponentTypes.BUCKET_ENTITY_DATA, NbtComponent.DEFAULT)));
+    public static final Item TUNA_SPAWN_EGG = registerItem("tuna_spawn_egg", new SpawnEggItem(ModEntities.TUNA, 0, 0, new Item.Settings()));
+
     public static final Item SOUR_BERRIES = registerItem("sour_berries", new AliasedBlockItem(ModBlocks.SOUR_BERRY_BUSH, new Item.Settings().food(FoodComponents.SWEET_BERRIES)));
     public static final Item SWEET_BERRY_JUICE = registerItem("sweet_berry_juice", new Item(new Item.Settings()));
     public static final Item SWEET_WINE = registerItem("sweet_wine", new Item(new Item.Settings()));
@@ -37,12 +41,12 @@ public class ModItems {
     public static final Item SOUR_WINE = registerItem("sour_wine", new Item(new Item.Settings()));
     public static final Item GLOW_BERRY_JUICE = registerItem("glow_berry_juice", new Item(new Item.Settings()));
     public static final Item GLOW_BERRY_WINE = registerItem("glow_berry_wine", new Item(new Item.Settings()));
-    public static final Item TUNA = registerItem("tuna", new Item(new Item.Settings()));
-    public static final Item TUNA_BUCKET = registerItem("tuna_bucket", new EntityBucketItem(ModEntities.TUNA, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().maxCount(1).component(DataComponentTypes.BUCKET_ENTITY_DATA, NbtComponent.DEFAULT)));
-    public static final Item TUNA_SPAWN_EGG = registerItem("tuna_spawn_egg", new SpawnEggItem(ModEntities.TUNA, 0, 0, new Item.Settings()));
+
     public static final Item NIGHTSHADE_SEEDS = registerItem("nightshade_seeds", new AliasedBlockItem(ModBlocks.NIGHTSHADE_CROP, new Item.Settings()));
     public static final Item CAMELIA_SEEDS = registerItem("camelia_seeds", new AliasedBlockItem(ModBlocks.CAMELIA_CROP, new Item.Settings()));
     public static final Item LAVENDER_SEEDS = registerItem("lavender_seeds", new AliasedBlockItem(ModBlocks.LAVENDER_CROP, new Item.Settings()));
     public static final Item VANILLA = registerItem("vanilla", new Item(new Item.Settings()));
     public static final Item VANILLA_SEEDS = registerItem("vanilla_seeds", new AliasedBlockItem(ModBlocks.VANILLA_CROP, new Item.Settings()));
+
+    public static final Item RUBY = registerItem("ruby", new Item(new Item.Settings()));
 }
