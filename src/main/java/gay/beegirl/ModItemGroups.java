@@ -86,15 +86,7 @@ public class ModItemGroups {
             content.addAfter(ModBlocks.ANDESITE_DIAMOND_ORE, ModBlocks.DRIPSTONE_DIAMOND_ORE);
             content.addAfter(Blocks.DEEPSLATE_DIAMOND_ORE, ModBlocks.TUFF_DIAMOND_ORE);
 
-            content.addAfter(ModBlocks.TUFF_DIAMOND_ORE, ModBlocks.WHITE_QUARTZ_ORE);
-            content.addAfter(ModBlocks.WHITE_QUARTZ_ORE, ModBlocks.GRANITE_WHITE_QUARTZ_ORE);
-            content.addAfter(ModBlocks.GRANITE_WHITE_QUARTZ_ORE, ModBlocks.DIORITE_WHITE_QUARTZ_ORE);
-            content.addAfter(ModBlocks.DIORITE_WHITE_QUARTZ_ORE, ModBlocks.ANDESITE_WHITE_QUARTZ_ORE);
-            content.addAfter(ModBlocks.ANDESITE_WHITE_QUARTZ_ORE, ModBlocks.DRIPSTONE_WHITE_QUARTZ_ORE);
-            content.addAfter(ModBlocks.DRIPSTONE_WHITE_QUARTZ_ORE, ModBlocks.DEEPSLATE_WHITE_QUARTZ_ORE);
-            content.addAfter(ModBlocks.DEEPSLATE_WHITE_QUARTZ_ORE, ModBlocks.TUFF_WHITE_QUARTZ_ORE);
-
-            content.addAfter(ModBlocks.TUFF_WHITE_QUARTZ_ORE, ModBlocks.RUBY_ORE);
+            content.addAfter(ModBlocks.TUFF_DIAMOND_ORE, ModBlocks.RUBY_ORE);
             content.addAfter(ModBlocks.RUBY_ORE, ModBlocks.GRANITE_RUBY_ORE);
             content.addAfter(ModBlocks.GRANITE_RUBY_ORE, ModBlocks.DIORITE_RUBY_ORE);
             content.addAfter(ModBlocks.DIORITE_RUBY_ORE, ModBlocks.ANDESITE_RUBY_ORE);
@@ -141,6 +133,14 @@ public class ModItemGroups {
             content.addAfter(ModBlocks.ANDESITE_SPINEL_ORE, ModBlocks.DRIPSTONE_SPINEL_ORE);
             content.addAfter(ModBlocks.DRIPSTONE_SPINEL_ORE, ModBlocks.DEEPSLATE_SPINEL_ORE);
             content.addAfter(ModBlocks.DEEPSLATE_SPINEL_ORE, ModBlocks.TUFF_SPINEL_ORE);
+
+            content.addAfter(ModBlocks.TUFF_SPINEL_ORE, ModBlocks.WHITE_QUARTZ_ORE);
+            content.addAfter(ModBlocks.WHITE_QUARTZ_ORE, ModBlocks.GRANITE_WHITE_QUARTZ_ORE);
+            content.addAfter(ModBlocks.GRANITE_WHITE_QUARTZ_ORE, ModBlocks.DIORITE_WHITE_QUARTZ_ORE);
+            content.addAfter(ModBlocks.DIORITE_WHITE_QUARTZ_ORE, ModBlocks.ANDESITE_WHITE_QUARTZ_ORE);
+            content.addAfter(ModBlocks.ANDESITE_WHITE_QUARTZ_ORE, ModBlocks.DRIPSTONE_WHITE_QUARTZ_ORE);
+            content.addAfter(ModBlocks.DRIPSTONE_WHITE_QUARTZ_ORE, ModBlocks.DEEPSLATE_WHITE_QUARTZ_ORE);
+            content.addAfter(ModBlocks.DEEPSLATE_WHITE_QUARTZ_ORE, ModBlocks.TUFF_WHITE_QUARTZ_ORE);
 
             content.addAfter(Blocks.NETHER_GOLD_ORE, ModBlocks.BLACKSTONE_GOLD_ORE);
             content.addAfter(ModBlocks.BLACKSTONE_GOLD_ORE, ModBlocks.BASALT_GOLD_ORE);
@@ -191,6 +191,8 @@ public class ModItemGroups {
         entries.add(ModItems.BREADCRUMBS);
         entries.add(ModItems.CUSTARD);
         entries.add(ModItems.VANILLA);
+        entries.add(ModItems.PUMPKIN_SLICE);
+        entries.add(ModItems.TUNA);
     });
     public static final ItemGroup CROPS = registerItemGroup("crops", ModBlocks.NIGHTSHADE.asItem(), (displayContext, entries) -> {
         entries.add(ModBlocks.NIGHTSHADE);
@@ -204,15 +206,6 @@ public class ModItemGroups {
         entries.add(ModItems.SOUR_BERRIES);
     });
     public static final ItemGroup GEMS = registerItemGroup("gems", ModItems.RUBY, (displayContext, entries) -> {
-        entries.add(ModItems.WHITE_QUARTZ);
-        entries.add(ModBlocks.WHITE_QUARTZ_ORE);
-        entries.add(ModBlocks.GRANITE_WHITE_QUARTZ_ORE);
-        entries.add(ModBlocks.DIORITE_WHITE_QUARTZ_ORE);
-        entries.add(ModBlocks.ANDESITE_WHITE_QUARTZ_ORE);
-        entries.add(ModBlocks.DRIPSTONE_WHITE_QUARTZ_ORE);
-        entries.add(ModBlocks.DEEPSLATE_WHITE_QUARTZ_ORE);
-        entries.add(ModBlocks.TUFF_WHITE_QUARTZ_ORE);
-
         entries.add(ModItems.RUBY);
         entries.add(ModBlocks.RUBY_BLOCK);
         entries.add(ModBlocks.RUBY_ORE);
@@ -272,5 +265,14 @@ public class ModItemGroups {
         entries.add(ModBlocks.DRIPSTONE_SPINEL_ORE);
         entries.add(ModBlocks.DEEPSLATE_SPINEL_ORE);
         entries.add(ModBlocks.TUFF_SPINEL_ORE);
+
+        entries.add(ModItems.WHITE_QUARTZ);
+        entries.add(ModBlocks.WHITE_QUARTZ_ORE);
+        entries.add(ModBlocks.GRANITE_WHITE_QUARTZ_ORE);
+        entries.add(ModBlocks.DIORITE_WHITE_QUARTZ_ORE);
+        entries.add(ModBlocks.ANDESITE_WHITE_QUARTZ_ORE);
+        entries.add(ModBlocks.DRIPSTONE_WHITE_QUARTZ_ORE);
+        entries.add(ModBlocks.DEEPSLATE_WHITE_QUARTZ_ORE);
+        entries.add(ModBlocks.TUFF_WHITE_QUARTZ_ORE);
     });
 }

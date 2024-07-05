@@ -29,6 +29,7 @@ public class ModItems {
     public static final Item BREADCRUMBS = registerItem("breadcrumbs", new Item(new Item.Settings()));
     public static final Item CUSTARD = registerItem("custard", new Item(new Item.Settings()));
     public static final Item FLESH_JERKY = registerItem("flesh_jerky", new Item(new Item.Settings().food(new FoodComponent.Builder().nutrition(2).saturationModifier(0).snack().build())));
+    public static final Item PUMPKIN_SLICE = registerItem("pumpkin_slice", new Item(new Item.Settings().food(FoodComponents.MELON_SLICE)));
     public static final Item TUNA = registerItem("tuna", new Item(new Item.Settings()));
     public static final Item TUNA_BUCKET = registerItem("tuna_bucket", new EntityBucketItem(ModEntities.TUNA, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().maxCount(1).component(DataComponentTypes.BUCKET_ENTITY_DATA, NbtComponent.DEFAULT)));
     public static final Item TUNA_SPAWN_EGG = registerItem("tuna_spawn_egg", new SpawnEggItem(ModEntities.TUNA, 0, 0, new Item.Settings()));

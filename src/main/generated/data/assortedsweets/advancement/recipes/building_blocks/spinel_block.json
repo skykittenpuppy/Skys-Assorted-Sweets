@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_spinel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "assortedsweets:spinel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:spinel_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_spinel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:spinel_block"
+    ]
+  }
+}

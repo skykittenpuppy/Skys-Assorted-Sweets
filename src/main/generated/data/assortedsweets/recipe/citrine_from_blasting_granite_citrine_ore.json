@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "citrine",
+  "ingredient": {
+    "item": "assortedsweets:granite_citrine_ore"
+  },
+  "result": {
+    "id": "assortedsweets:citrine"
+  }
+}

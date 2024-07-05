@@ -16,5 +16,6 @@ public class ModInit implements ModInitializer {
 		ModEntities.registerModEntities();
 		ModItemGroups.registerModItemGroups();
 		ModSoundEvents.registerModSoundEvents();
+		ModEntitySpawns.registerModEntitySpawns();
 	}
 }

@@ -1,24 +1,31 @@
 package gay.beegirl;
 
-import gay.beegirl.CustomClasses.FlowerCropBlock;
-import gay.beegirl.CustomClasses.ModCropBlock;
 import gay.beegirl.CustomClasses.PlaceableFoodBlock;
-import gay.beegirl.CustomClasses.BerryBushBlock;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.World;
+
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class ModBlocks {
     public static void registerModBlocks(){
         ModInit.LOGGER.info("Registering Blocks");
+        UseBlockCallback.EVENT.register(ModBlocks::harvestCrop);
     }
     private static Block registerBlock(String name, Block block, boolean hasBlockItem){
         if (hasBlockItem) {
@@ -33,6 +40,43 @@ public class ModBlocks {
                 Identifier.tryParse(ModInit.MOD_ID, name),
                 block
         );
+    }
+
+    // Copied from Cropped https://github.com/NyakoFox/cropped/blob/1.19/src/main/java/gay/nyako/cropped/CroppedMod.java
+    private static ActionResult harvestCrop (PlayerEntity player, World world, Hand hand, BlockHitResult hitResult) {
+        if (player.isSneaking() || player.isSpectator()) {
+            return ActionResult.PASS;
+        }
+
+        var blockState = world.getBlockState(hitResult.getBlockPos());
+        var block = blockState.getBlock();
+        var handStack = player.getStackInHand(hand);
+
+        if (!(block instanceof TorchflowerBlock) && block instanceof CropBlock cropBlock) {
+            if (cropBlock.isMature(blockState)) {
+                //cropBlock.onUse(blockState, world, hitResult.getBlockPos(), player, hand, hitResult);
+
+                if (!world.isClient())
+                {
+                    world.setBlockState(hitResult.getBlockPos(), cropBlock.withAge(0));
+                    Item seed = cropBlock.getPickStack(world, hitResult.getBlockPos(), blockState).getItem();
+                    AtomicBoolean removedSeed = new AtomicBoolean(false);
+
+                    Block.getDroppedStacks(blockState, (ServerWorld) world, hitResult.getBlockPos(), null, player, handStack).forEach(stack -> {
+                        if (!removedSeed.get() && stack.getItem() == seed) {
+                            // It's PROBABLY a seed, so take one away
+                            removedSeed.set(true);
+                            stack.decrement(1);
+                        }
+                        Block.dropStack(world, hitResult.getBlockPos(), stack);
+                    });
+                }
+
+                return ActionResult.SUCCESS;
+            }
+        }
+
+        return ActionResult.PASS;
     }
 
     public static final Block SPONGE_CAKE = registerBlock("sponge_cake", new PlaceableFoodBlock(
@@ -152,17 +196,17 @@ public class ModBlocks {
             }
     ), true);
 
-    public static final Block SOUR_BERRY_BUSH = registerBlock("sour_berry_bush", new BerryBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)), false);
+    public static final Block SOUR_BERRY_BUSH = registerBlock("sour_berry_bush", new SweetBerryBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)), false);
     public static final Block NIGHTSHADE = registerBlock("nightshade", new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F,AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY)), true);
-    public static final Block NIGHTSHADE_CROP = registerBlock("nightshade_crop", new FlowerCropBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)), false);
+    public static final Block NIGHTSHADE_CROP = registerBlock("nightshade_crop", new TorchflowerBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)), false);
     public static final Block POTTED_NIGHTSHADE = registerBlock("potted_nightshade", new FlowerPotBlock(NIGHTSHADE, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY)), false);
     public static final Block CAMELIA = registerBlock("camelia", new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F,AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY)), true);
-    public static final Block CAMELIA_CROP = registerBlock("camelia_crop", new FlowerCropBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)), false);
+    public static final Block CAMELIA_CROP = registerBlock("camelia_crop", new TorchflowerBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)), false);
     public static final Block POTTED_CAMELIA = registerBlock("potted_camelia", new FlowerPotBlock(CAMELIA, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY)), false);
     public static final Block LAVENDER = registerBlock("lavender", new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F,AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY)), true);
-    public static final Block LAVENDER_CROP = registerBlock("lavender_crop", new FlowerCropBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)), false);
+    public static final Block LAVENDER_CROP = registerBlock("lavender_crop", new TorchflowerBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)), false);
     public static final Block POTTED_LAVENDER = registerBlock("potted_lavender", new FlowerPotBlock(LAVENDER, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY)), false);
-    public static final Block VANILLA_CROP = registerBlock("vanilla_crop", new ModCropBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)), false);
+    public static final Block VANILLA_CROP = registerBlock("vanilla_crop", new CropBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)), false);
 
     public static final Block GRANITE_COAL_ORE = registerBlock("granite_coal_ore", new Block(AbstractBlock.Settings.copy(Blocks.TUFF)), true);
     public static final Block DIORITE_COAL_ORE = registerBlock("diorite_coal_ore", new Block(AbstractBlock.Settings.copy(Blocks.TUFF)), true);

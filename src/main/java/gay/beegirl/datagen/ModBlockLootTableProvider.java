@@ -1,15 +1,10 @@
 package gay.beegirl.datagen;
 
-import gay.beegirl.CustomClasses.BerryBushBlock;
-import gay.beegirl.CustomClasses.FlowerCropBlock;
 import gay.beegirl.ModBlocks;
 import gay.beegirl.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.CropBlock;
-import net.minecraft.block.PitcherCropBlock;
-import net.minecraft.block.TorchflowerBlock;
+import net.minecraft.block.*;
 import net.minecraft.data.server.loottable.vanilla.VanillaBlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
@@ -19,8 +14,11 @@ import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
+import net.minecraft.loot.function.LimitCountLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.operator.BoundedIntUnaryOperator;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryKeys;
@@ -46,22 +44,22 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
                         .exactMatch(TorchflowerBlock.AGE, 2));
         BlockStatePropertyLootCondition.Builder grownNightshadeBuilder = BlockStatePropertyLootCondition.builder(ModBlocks.NIGHTSHADE_CROP)
                 .properties(StatePredicate.Builder.create()
-                        .exactMatch(FlowerCropBlock.AGE, 2));
+                        .exactMatch(TorchflowerBlock.AGE, 2));
         BlockStatePropertyLootCondition.Builder grownCameliaBuilder = BlockStatePropertyLootCondition.builder(ModBlocks.CAMELIA_CROP)
                 .properties(StatePredicate.Builder.create()
-                        .exactMatch(FlowerCropBlock.AGE, 2));
+                        .exactMatch(TorchflowerBlock.AGE, 2));
         BlockStatePropertyLootCondition.Builder grownLavenderBuilder = BlockStatePropertyLootCondition.builder(ModBlocks.LAVENDER_CROP)
                 .properties(StatePredicate.Builder.create()
-                        .exactMatch(FlowerCropBlock.AGE, 2));
+                        .exactMatch(TorchflowerBlock.AGE, 2));
         BlockStatePropertyLootCondition.Builder grownVanillaBuilder = BlockStatePropertyLootCondition.builder(ModBlocks.VANILLA_CROP)
                 .properties(StatePredicate.Builder.create()
                         .exactMatch(CropBlock.AGE, 7));
         BlockStatePropertyLootCondition.Builder partGrownSourBerryBuilder = BlockStatePropertyLootCondition.builder(ModBlocks.SOUR_BERRY_BUSH)
                 .properties(StatePredicate.Builder.create()
-                        .exactMatch(BerryBushBlock.AGE, 2));
+                        .exactMatch(SweetBerryBushBlock.AGE, 2));
         BlockStatePropertyLootCondition.Builder grownSourBerryBuilder = BlockStatePropertyLootCondition.builder(ModBlocks.SOUR_BERRY_BUSH)
                 .properties(StatePredicate.Builder.create()
-                        .exactMatch(BerryBushBlock.AGE, 3));
+                        .exactMatch(SweetBerryBushBlock.AGE, 3));
 
         addDrop(Blocks.PITCHER_CROP, (block) -> applyExplosionDecay(block,
                 LootTable.builder()
@@ -153,6 +151,12 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
                                 .conditionally(grownVanillaBuilder)
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 3.0F)))
                                 .with(ItemEntry.builder(ModItems.VANILLA)))));
+
+        addDrop(Blocks.PUMPKIN, (block) -> dropsWithSilkTouch(block,
+                    applyExplosionDecay(block, ItemEntry.builder(ModItems.PUMPKIN_SLICE))
+                            .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(3.0F, 6.0F)))
+                            .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
+                            .apply(LimitCountLootFunction.builder(BoundedIntUnaryOperator.createMax(9)))));
 
         addDrop(Blocks.COAL_ORE, (block) -> oreDrops(block, Items.COAL));
         addDrop(ModBlocks.GRANITE_COAL_ORE, (block) -> oreDrops(block, Items.COAL));

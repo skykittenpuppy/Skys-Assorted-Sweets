@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "spinel",
+  "ingredient": {
+    "item": "assortedsweets:granite_spinel_ore"
+  },
+  "result": {
+    "id": "assortedsweets:spinel"
+  }
+}

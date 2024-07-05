@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "citrine",
+  "ingredient": {
+    "item": "assortedsweets:granite_citrine_ore"
+  },
+  "result": {
+    "id": "assortedsweets:citrine"
+  }
+}

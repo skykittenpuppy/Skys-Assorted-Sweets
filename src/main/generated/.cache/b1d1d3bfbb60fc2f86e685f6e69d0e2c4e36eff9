@@ -1,6 +1,16 @@
-// 1.21	2024-07-05T00:01:31.708768109	Sky's Assorted Sweets/Tags for minecraft:block
+// 1.21	2024-07-05T21:48:57.736758358	Sky's Assorted Sweets/Tags for minecraft:block
+464c32745ce9536f43df5e5afde2d9ca0427929f data/minecraft/tags/block/beacon_base_blocks.json
+c36f55db28d14141ce1ccbb24a526074fdf0962e data/minecraft/tags/block/gold_ores.json
+23b10db03098050298940318c1a227ef1aa42f23 data/minecraft/tags/block/mineable/pickaxe.json
+4a413a3c2dad8aca761a1ff87672e73497255d7f data/minecraft/tags/block/maintains_farmland.json
+2a91b6330ee7bc9386cefb4ed7b4c087d8b24729 data/minecraft/tags/block/coal_ores.json
+d33a5a5b039d4663a1a9ed72e50009cf5a409059 data/minecraft/tags/block/crops.json
 205a573bd02adf65adc97cee9ddd7ba01a17078d data/minecraft/tags/block/bee_growables.json
 52f07be44504a4dca7aedb3e44585e9f74b6ae2a data/minecraft/tags/block/flower_pots.json
-4a413a3c2dad8aca761a1ff87672e73497255d7f data/minecraft/tags/block/maintains_farmland.json
-d33a5a5b039d4663a1a9ed72e50009cf5a409059 data/minecraft/tags/block/crops.json
+1f41906a6f4b6ce4db94217270a6389c181d2fc4 data/minecraft/tags/block/diamond_ores.json
+8d28cd35a69f9731b4dbb2c3e3c1d0f123871244 data/minecraft/tags/block/copper_ores.json
+bded2c66db2ace040cdd1f4d54d81328b7c12bda data/minecraft/tags/block/redstone_ores.json
+733614644be167d0911f04883a10a065b04658eb data/minecraft/tags/block/emerald_ores.json
+6ac1b2ec209197bd668c6fe31743f83348b8a012 data/minecraft/tags/block/iron_ores.json
 6b745283bf7e61df7ea5514443e868a0248041f5 data/minecraft/tags/block/small_flowers.json
+6202c89d6d145ceed2a624a60e3e97c989a9910c data/minecraft/tags/block/lapis_ores.json

@@ -1,18 +1,15 @@
 package gay.beegirl.datagen;
 
-import gay.beegirl.CustomClasses.BerryBushBlock;
-import gay.beegirl.CustomClasses.FlowerCropBlock;
 import gay.beegirl.ModBlocks;
 import gay.beegirl.ModInit;
 import gay.beegirl.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.CropBlock;
+import net.minecraft.block.*;
 import net.minecraft.data.client.*;
 import net.minecraft.data.client.BlockStateModelGenerator.TintType;
 import net.minecraft.state.property.Properties;
+import net.minecraft.state.property.Property;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.NotNull;
 
@@ -161,12 +158,13 @@ public class ModModelProvider extends FabricModelProvider {
         registerOreBlock(blockStateModelGenerator, ModBlocks.DEEPSLATE_SPINEL_ORE, Blocks.DEEPSLATE, Identifier.of(ModInit.MOD_ID, "spinel"));
         registerOreBlock(blockStateModelGenerator, ModBlocks.TUFF_SPINEL_ORE, Blocks.TUFF, Identifier.of(ModInit.MOD_ID, "spinel"));
 
-        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.SOUR_BERRY_BUSH, TintType.NOT_TINTED, BerryBushBlock.AGE, 0,1,2,3);
-        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.NIGHTSHADE_CROP, TintType.NOT_TINTED, FlowerCropBlock.AGE, 0,1,2);
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(Blocks.TORCHFLOWER_CROP, TintType.NOT_TINTED, TorchflowerBlock.AGE, 0,1,2);
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.SOUR_BERRY_BUSH, TintType.NOT_TINTED, SweetBerryBushBlock.AGE, 0,1,2,3);
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.NIGHTSHADE_CROP, TintType.NOT_TINTED, TorchflowerBlock.AGE, 0,1,2);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.NIGHTSHADE, ModBlocks.POTTED_NIGHTSHADE, TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.CAMELIA_CROP, TintType.NOT_TINTED, FlowerCropBlock.AGE, 0,1,2);
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.CAMELIA_CROP, TintType.NOT_TINTED, TorchflowerBlock.AGE, 0,1,2);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.CAMELIA, ModBlocks.POTTED_CAMELIA, TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.LAVENDER_CROP, TintType.NOT_TINTED, FlowerCropBlock.AGE, 0,1,2);
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.LAVENDER_CROP, TintType.NOT_TINTED, TorchflowerBlock.AGE, 0,1,2);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LAVENDER, ModBlocks.POTTED_LAVENDER, TintType.NOT_TINTED);
         blockStateModelGenerator.registerCrop(ModBlocks.VANILLA_CROP, CropBlock.AGE, 0,0,1,1,2,2,2,3);
     }
@@ -187,6 +185,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BREADCRUMBS, Models.GENERATED);
         itemModelGenerator.register(ModItems.CUSTARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.FLESH_JERKY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PUMPKIN_SLICE, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUNA, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUNA_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUNA_SPAWN_EGG, SPAWN_EGG);
@@ -252,6 +251,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ore)
                 .coordinate(createBooleanModelMap(Properties.LIT, oreOnModelID, oreModelID)));
+
+        blockStateModelGenerator.registerParentedItemModel(ore, oreOnModelID);
     }
 
     /*private BlockStateProvider registerPlaceableFood(PlaceableFoodBlock block, Property<Integer> ageProperty, int... ageModelIndices){
