@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "assortedsweets:block/tuff_redstone_ore"
+    },
+    "lit=true": {
+      "model": "assortedsweets:block/tuff_redstone_ore_on"
+    }
+  }
+}

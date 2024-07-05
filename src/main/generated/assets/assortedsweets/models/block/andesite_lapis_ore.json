@@ -1,0 +1,7 @@
+{
+  "parent": "assortedsweets:block/template_ore",
+  "textures": {
+    "layer0": "minecraft:block/andesite",
+    "layer1": "minecraft:block/lapis_ore_overlay"
+  }
+}

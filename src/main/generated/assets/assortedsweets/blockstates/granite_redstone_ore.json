@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "assortedsweets:block/granite_redstone_ore"
+    },
+    "lit=true": {
+      "model": "assortedsweets:block/granite_redstone_ore_on"
+    }
+  }
+}

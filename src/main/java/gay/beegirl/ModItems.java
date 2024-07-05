@@ -1,6 +1,5 @@
 package gay.beegirl;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.component.type.FoodComponents;
@@ -48,5 +47,11 @@ public class ModItems {
     public static final Item VANILLA = registerItem("vanilla", new Item(new Item.Settings()));
     public static final Item VANILLA_SEEDS = registerItem("vanilla_seeds", new AliasedBlockItem(ModBlocks.VANILLA_CROP, new Item.Settings()));
 
+    public static final Item WHITE_QUARTZ = registerItem("white_quartz", new Item(new Item.Settings()));
     public static final Item RUBY = registerItem("ruby", new Item(new Item.Settings()));
+    public static final Item SAPPHIRE = registerItem("sapphire", new Item(new Item.Settings()));
+    public static final Item TOPAZ = registerItem("topaz", new Item(new Item.Settings()));
+    public static final Item CITRINE = registerItem("citrine", new Item(new Item.Settings()));
+    public static final Item ALEXANDRITE = registerItem("alexandrite", new Item(new Item.Settings()));
+    public static final Item SPINEL = registerItem("spinel", new Item(new Item.Settings()));
 }

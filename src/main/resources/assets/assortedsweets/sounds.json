@@ -1,0 +1,26 @@
+{
+  "entity.tuna.ambient": {
+    "subtitle": "subtitles.entity.tuna.ambient",
+    "sounds": [
+      "assortedsweets:entity/tuna/ambient"
+    ]
+  },
+  "entity.tuna.death": {
+    "subtitle": "subtitles.entity.tuna.death",
+    "sounds": [
+      "assortedsweets:entity/tuna/death"
+    ]
+  },
+  "entity.tuna.flop": {
+    "subtitle": "subtitles.entity.tuna.flop",
+    "sounds": [
+      "assortedsweets:entity/tuna/flop"
+    ]
+  },
+  "entity.tuna.hurt": {
+    "subtitle": "subtitles.entity.tuna.hurt",
+    "sounds": [
+      "assortedsweets:entity/tuna/hurt"
+    ]
+  }
+}

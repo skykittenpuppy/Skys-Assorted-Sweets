@@ -1,0 +1,7 @@
+{
+  "parent": "assortedsweets:block/template_ore",
+  "textures": {
+    "layer0": "minecraft:block/deepslate",
+    "layer1": "assortedsweets:block/white_quartz_ore_overlay"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "assortedsweets:block/template_ore",
+  "textures": {
+    "layer0": "minecraft:block/tuff",
+    "layer1": "minecraft:block/iron_ore_overlay"
+  }
+}

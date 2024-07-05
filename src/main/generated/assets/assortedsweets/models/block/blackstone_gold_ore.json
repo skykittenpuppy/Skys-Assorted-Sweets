@@ -1,0 +1,7 @@
+{
+  "parent": "assortedsweets:block/template_ore",
+  "textures": {
+    "layer0": "minecraft:block/blackstone",
+    "layer1": "minecraft:block/gold_nugget_ore_overlay"
+  }
+}

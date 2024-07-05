@@ -153,6 +153,133 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
                                 .conditionally(grownVanillaBuilder)
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 3.0F)))
                                 .with(ItemEntry.builder(ModItems.VANILLA)))));
-        //addDrop(ModBlocks.VANILLA_CROP, (block) -> cropDrops(block, ModItems.VANILLA, ModItems.VANILLA_SEEDS, grownVanillaBuilder));
+
+        addDrop(Blocks.COAL_ORE, (block) -> oreDrops(block, Items.COAL));
+        addDrop(ModBlocks.GRANITE_COAL_ORE, (block) -> oreDrops(block, Items.COAL));
+        addDrop(ModBlocks.DIORITE_COAL_ORE, (block) -> oreDrops(block, Items.COAL));
+        addDrop(ModBlocks.ANDESITE_COAL_ORE, (block) -> oreDrops(block, Items.COAL));
+        addDrop(ModBlocks.DRIPSTONE_COAL_ORE, (block) -> oreDrops(block, Items.COAL));
+        addDrop(Blocks.DEEPSLATE_COAL_ORE, (block) -> oreDrops(block, Items.COAL));
+        addDrop(ModBlocks.TUFF_COAL_ORE, (block) -> oreDrops(block, Items.COAL));
+
+        addDrop(Blocks.IRON_ORE, (block) -> oreDrops(block, Items.RAW_IRON));
+        addDrop(ModBlocks.GRANITE_IRON_ORE, (block) -> oreDrops(block, Items.RAW_IRON));
+        addDrop(ModBlocks.DIORITE_IRON_ORE, (block) -> oreDrops(block, Items.RAW_IRON));
+        addDrop(ModBlocks.ANDESITE_IRON_ORE, (block) -> oreDrops(block, Items.RAW_IRON));
+        addDrop(ModBlocks.DRIPSTONE_IRON_ORE, (block) -> oreDrops(block, Items.RAW_IRON));
+        addDrop(Blocks.DEEPSLATE_IRON_ORE, (block) -> oreDrops(block, Items.RAW_IRON));
+        addDrop(ModBlocks.TUFF_IRON_ORE, (block) -> oreDrops(block, Items.RAW_IRON));
+
+        addDrop(Blocks.COPPER_ORE, this::copperOreDrops);
+        addDrop(ModBlocks.GRANITE_COPPER_ORE, this::copperOreDrops);
+        addDrop(ModBlocks.DIORITE_COPPER_ORE, this::copperOreDrops);
+        addDrop(ModBlocks.ANDESITE_COPPER_ORE, this::copperOreDrops);
+        addDrop(ModBlocks.DRIPSTONE_COPPER_ORE, this::copperOreDrops);
+        addDrop(Blocks.DEEPSLATE_COPPER_ORE, this::copperOreDrops);
+        addDrop(ModBlocks.TUFF_COPPER_ORE, this::copperOreDrops);
+
+        addDrop(Blocks.GOLD_ORE, (block) -> oreDrops(block, Items.RAW_GOLD));
+        addDrop(ModBlocks.GRANITE_GOLD_ORE, (block) -> oreDrops(block, Items.RAW_GOLD));
+        addDrop(ModBlocks.DIORITE_GOLD_ORE, (block) -> oreDrops(block, Items.RAW_GOLD));
+        addDrop(ModBlocks.ANDESITE_GOLD_ORE, (block) -> oreDrops(block, Items.RAW_GOLD));
+        addDrop(ModBlocks.DRIPSTONE_GOLD_ORE, (block) -> oreDrops(block, Items.RAW_GOLD));
+        addDrop(Blocks.DEEPSLATE_GOLD_ORE, (block) -> oreDrops(block, Items.RAW_GOLD));
+        addDrop(ModBlocks.TUFF_GOLD_ORE, (block) -> oreDrops(block, Items.RAW_GOLD));
+
+        addDrop(Blocks.REDSTONE_ORE, (block) -> oreDrops(block, Items.REDSTONE));
+        addDrop(ModBlocks.GRANITE_REDSTONE_ORE, (block) -> oreDrops(block, Items.REDSTONE));
+        addDrop(ModBlocks.DIORITE_REDSTONE_ORE, (block) -> oreDrops(block, Items.REDSTONE));
+        addDrop(ModBlocks.ANDESITE_REDSTONE_ORE, (block) -> oreDrops(block, Items.REDSTONE));
+        addDrop(ModBlocks.DRIPSTONE_REDSTONE_ORE, (block) -> oreDrops(block, Items.REDSTONE));
+        addDrop(Blocks.DEEPSLATE_REDSTONE_ORE, (block) -> oreDrops(block, Items.REDSTONE));
+        addDrop(ModBlocks.TUFF_REDSTONE_ORE, (block) -> oreDrops(block, Items.REDSTONE));
+
+        addDrop(Blocks.EMERALD_ORE, (block) -> oreDrops(block, Items.EMERALD));
+        addDrop(ModBlocks.GRANITE_EMERALD_ORE, (block) -> oreDrops(block, Items.EMERALD));
+        addDrop(ModBlocks.DIORITE_EMERALD_ORE, (block) -> oreDrops(block, Items.EMERALD));
+        addDrop(ModBlocks.ANDESITE_EMERALD_ORE, (block) -> oreDrops(block, Items.EMERALD));
+        addDrop(ModBlocks.DRIPSTONE_EMERALD_ORE, (block) -> oreDrops(block, Items.EMERALD));
+        addDrop(Blocks.DEEPSLATE_EMERALD_ORE, (block) -> oreDrops(block, Items.EMERALD));
+        addDrop(ModBlocks.TUFF_EMERALD_ORE, (block) -> oreDrops(block, Items.EMERALD));
+
+        addDrop(Blocks.LAPIS_ORE, this::lapisOreDrops);
+        addDrop(ModBlocks.GRANITE_LAPIS_ORE, this::lapisOreDrops);
+        addDrop(ModBlocks.DIORITE_LAPIS_ORE, this::lapisOreDrops);
+        addDrop(ModBlocks.ANDESITE_LAPIS_ORE, this::lapisOreDrops);
+        addDrop(ModBlocks.DRIPSTONE_LAPIS_ORE, this::lapisOreDrops);
+        addDrop(Blocks.DEEPSLATE_LAPIS_ORE, this::lapisOreDrops);
+        addDrop(ModBlocks.TUFF_LAPIS_ORE, this::lapisOreDrops);
+
+        addDrop(Blocks.DIAMOND_ORE, (block) -> oreDrops(block, Items.DIAMOND));
+        addDrop(ModBlocks.GRANITE_DIAMOND_ORE, (block) -> oreDrops(block, Items.DIAMOND));
+        addDrop(ModBlocks.DIORITE_DIAMOND_ORE, (block) -> oreDrops(block, Items.DIAMOND));
+        addDrop(ModBlocks.ANDESITE_DIAMOND_ORE, (block) -> oreDrops(block, Items.DIAMOND));
+        addDrop(ModBlocks.DRIPSTONE_DIAMOND_ORE, (block) -> oreDrops(block, Items.DIAMOND));
+        addDrop(Blocks.DEEPSLATE_DIAMOND_ORE, (block) -> oreDrops(block, Items.DIAMOND));
+        addDrop(ModBlocks.TUFF_DIAMOND_ORE, (block) -> oreDrops(block, Items.DIAMOND));
+
+        addDrop(Blocks.NETHER_GOLD_ORE, (block) -> dropsWithSilkTouch(block, applyExplosionDecay(block, ItemEntry.builder(Items.GOLD_NUGGET).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 6.0F))).apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE))))));
+        addDrop(ModBlocks.BLACKSTONE_GOLD_ORE, (block) -> dropsWithSilkTouch(block, applyExplosionDecay(block, ItemEntry.builder(Items.GOLD_NUGGET).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 6.0F))).apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE))))));
+        addDrop(ModBlocks.BASALT_GOLD_ORE, (block) -> dropsWithSilkTouch(block, applyExplosionDecay(block, ItemEntry.builder(Items.GOLD_NUGGET).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 6.0F))).apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE))))));
+
+        addDrop(Blocks.NETHER_QUARTZ_ORE, (block) -> oreDrops(block, Items.QUARTZ));
+        addDrop(ModBlocks.BLACKSTONE_QUARTZ_ORE, (block) -> oreDrops(block, Items.QUARTZ));
+        addDrop(ModBlocks.BASALT_QUARTZ_ORE, (block) -> oreDrops(block, Items.QUARTZ));
+
+        addDrop(ModBlocks.WHITE_QUARTZ_ORE, (block) -> oreDrops(block, ModItems.WHITE_QUARTZ));
+        addDrop(ModBlocks.GRANITE_WHITE_QUARTZ_ORE, (block) -> oreDrops(block, ModItems.WHITE_QUARTZ));
+        addDrop(ModBlocks.DIORITE_WHITE_QUARTZ_ORE, (block) -> oreDrops(block, ModItems.WHITE_QUARTZ));
+        addDrop(ModBlocks.ANDESITE_WHITE_QUARTZ_ORE, (block) -> oreDrops(block, ModItems.WHITE_QUARTZ));
+        addDrop(ModBlocks.DRIPSTONE_WHITE_QUARTZ_ORE, (block) -> oreDrops(block, ModItems.WHITE_QUARTZ));
+        addDrop(ModBlocks.DEEPSLATE_WHITE_QUARTZ_ORE, (block) -> oreDrops(block, ModItems.WHITE_QUARTZ));
+        addDrop(ModBlocks.TUFF_WHITE_QUARTZ_ORE, (block) -> oreDrops(block, ModItems.WHITE_QUARTZ));
+
+        addDrop(ModBlocks.RUBY_ORE, (block) -> oreDrops(block, ModItems.RUBY));
+        addDrop(ModBlocks.GRANITE_RUBY_ORE, (block) -> oreDrops(block, ModItems.RUBY));
+        addDrop(ModBlocks.DIORITE_RUBY_ORE, (block) -> oreDrops(block, ModItems.RUBY));
+        addDrop(ModBlocks.ANDESITE_RUBY_ORE, (block) -> oreDrops(block, ModItems.RUBY));
+        addDrop(ModBlocks.DRIPSTONE_RUBY_ORE, (block) -> oreDrops(block, ModItems.RUBY));
+        addDrop(ModBlocks.DEEPSLATE_RUBY_ORE, (block) -> oreDrops(block, ModItems.RUBY));
+        addDrop(ModBlocks.TUFF_RUBY_ORE, (block) -> oreDrops(block, ModItems.RUBY));
+
+        addDrop(ModBlocks.SAPPHIRE_ORE, (block) -> oreDrops(block, ModItems.SAPPHIRE));
+        addDrop(ModBlocks.GRANITE_SAPPHIRE_ORE, (block) -> oreDrops(block, ModItems.SAPPHIRE));
+        addDrop(ModBlocks.DIORITE_SAPPHIRE_ORE, (block) -> oreDrops(block, ModItems.SAPPHIRE));
+        addDrop(ModBlocks.ANDESITE_SAPPHIRE_ORE, (block) -> oreDrops(block, ModItems.SAPPHIRE));
+        addDrop(ModBlocks.DRIPSTONE_SAPPHIRE_ORE, (block) -> oreDrops(block, ModItems.SAPPHIRE));
+        addDrop(ModBlocks.DEEPSLATE_SAPPHIRE_ORE, (block) -> oreDrops(block, ModItems.SAPPHIRE));
+        addDrop(ModBlocks.TUFF_SAPPHIRE_ORE, (block) -> oreDrops(block, ModItems.SAPPHIRE));
+
+        addDrop(ModBlocks.TOPAZ_ORE, (block) -> oreDrops(block, ModItems.TOPAZ));
+        addDrop(ModBlocks.GRANITE_TOPAZ_ORE, (block) -> oreDrops(block, ModItems.TOPAZ));
+        addDrop(ModBlocks.DIORITE_TOPAZ_ORE, (block) -> oreDrops(block, ModItems.TOPAZ));
+        addDrop(ModBlocks.ANDESITE_TOPAZ_ORE, (block) -> oreDrops(block, ModItems.TOPAZ));
+        addDrop(ModBlocks.DRIPSTONE_TOPAZ_ORE, (block) -> oreDrops(block, ModItems.TOPAZ));
+        addDrop(ModBlocks.DEEPSLATE_TOPAZ_ORE, (block) -> oreDrops(block, ModItems.TOPAZ));
+        addDrop(ModBlocks.TUFF_TOPAZ_ORE, (block) -> oreDrops(block, ModItems.TOPAZ));
+
+        addDrop(ModBlocks.CITRINE_ORE, (block) -> oreDrops(block, ModItems.CITRINE));
+        addDrop(ModBlocks.GRANITE_CITRINE_ORE, (block) -> oreDrops(block, ModItems.CITRINE));
+        addDrop(ModBlocks.DIORITE_CITRINE_ORE, (block) -> oreDrops(block, ModItems.CITRINE));
+        addDrop(ModBlocks.ANDESITE_CITRINE_ORE, (block) -> oreDrops(block, ModItems.CITRINE));
+        addDrop(ModBlocks.DRIPSTONE_CITRINE_ORE, (block) -> oreDrops(block, ModItems.CITRINE));
+        addDrop(ModBlocks.DEEPSLATE_CITRINE_ORE, (block) -> oreDrops(block, ModItems.CITRINE));
+        addDrop(ModBlocks.TUFF_CITRINE_ORE, (block) -> oreDrops(block, ModItems.CITRINE));
+
+        addDrop(ModBlocks.ALEXANDRITE_ORE, (block) -> oreDrops(block, ModItems.ALEXANDRITE));
+        addDrop(ModBlocks.GRANITE_ALEXANDRITE_ORE, (block) -> oreDrops(block, ModItems.ALEXANDRITE));
+        addDrop(ModBlocks.DIORITE_ALEXANDRITE_ORE, (block) -> oreDrops(block, ModItems.ALEXANDRITE));
+        addDrop(ModBlocks.ANDESITE_ALEXANDRITE_ORE, (block) -> oreDrops(block, ModItems.ALEXANDRITE));
+        addDrop(ModBlocks.DRIPSTONE_ALEXANDRITE_ORE, (block) -> oreDrops(block, ModItems.ALEXANDRITE));
+        addDrop(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE, (block) -> oreDrops(block, ModItems.ALEXANDRITE));
+        addDrop(ModBlocks.TUFF_ALEXANDRITE_ORE, (block) -> oreDrops(block, ModItems.ALEXANDRITE));
+
+        addDrop(ModBlocks.SPINEL_ORE, (block) -> oreDrops(block, ModItems.SPINEL));
+        addDrop(ModBlocks.GRANITE_SPINEL_ORE, (block) -> oreDrops(block, ModItems.SPINEL));
+        addDrop(ModBlocks.DIORITE_SPINEL_ORE, (block) -> oreDrops(block, ModItems.SPINEL));
+        addDrop(ModBlocks.ANDESITE_SPINEL_ORE, (block) -> oreDrops(block, ModItems.SPINEL));
+        addDrop(ModBlocks.DRIPSTONE_SPINEL_ORE, (block) -> oreDrops(block, ModItems.SPINEL));
+        addDrop(ModBlocks.DEEPSLATE_SPINEL_ORE, (block) -> oreDrops(block, ModItems.SPINEL));
+        addDrop(ModBlocks.TUFF_SPINEL_ORE, (block) -> oreDrops(block, ModItems.SPINEL));
     }
 }

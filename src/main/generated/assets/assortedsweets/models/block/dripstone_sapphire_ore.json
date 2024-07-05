@@ -1,0 +1,7 @@
+{
+  "parent": "assortedsweets:block/template_ore",
+  "textures": {
+    "layer0": "minecraft:block/dripstone_block",
+    "layer1": "assortedsweets:block/sapphire_ore_overlay"
+  }
+}

@@ -6,12 +6,19 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class ModSoundEvents {
-    public static final SoundEvent ENTITY_TUNA_AMBIENT = register("entity.tuna.ambient");
-    public static final SoundEvent ENTITY_TUNA_DEATH = register("entity.tuna.death");
-    public static final SoundEvent ENTITY_TUNA_FLOP = register("entity.tuna.flop");
-    public static final SoundEvent ENTITY_TUNA_HURT = register("entity.tuna.hurt");
-
-    private static SoundEvent register(String name) {
-        return Registry.register(Registries.SOUND_EVENT, Identifier.tryParse(ModInit.MOD_ID, name), SoundEvent.of(Identifier.tryParse(ModInit.MOD_ID, name)));
+    public static void registerModSoundEvents(){
+        Registry.register(Registries.SOUND_EVENT, ENTITY_TUNA_AMBIENT_ID, ENTITY_TUNA_AMBIENT_EVENT);
+        Registry.register(Registries.SOUND_EVENT, ENTITY_TUNA_DEATH_ID, ENTITY_TUNA_DEATH_EVENT);
+        Registry.register(Registries.SOUND_EVENT, ENTITY_TUNA_FLOP_ID, ENTITY_TUNA_FLOP_EVENT);
+        Registry.register(Registries.SOUND_EVENT, ENTITY_TUNA_HURT_ID, ENTITY_TUNA_HURT_EVENT);
     }
+
+    private static final Identifier ENTITY_TUNA_AMBIENT_ID = Identifier.of(ModInit.MOD_ID, "entity.tuna.ambient");
+    public static SoundEvent ENTITY_TUNA_AMBIENT_EVENT = SoundEvent.of(ENTITY_TUNA_AMBIENT_ID);
+    private static final Identifier ENTITY_TUNA_DEATH_ID = Identifier.of(ModInit.MOD_ID, "entity.tuna.death");
+    public static SoundEvent ENTITY_TUNA_DEATH_EVENT = SoundEvent.of(ENTITY_TUNA_DEATH_ID);
+    private static final Identifier ENTITY_TUNA_FLOP_ID = Identifier.of(ModInit.MOD_ID, "entity.tuna.flop");
+    public static SoundEvent ENTITY_TUNA_FLOP_EVENT = SoundEvent.of(ENTITY_TUNA_FLOP_ID);
+    private static final Identifier ENTITY_TUNA_HURT_ID = Identifier.of(ModInit.MOD_ID, "entity.tuna.hurt");
+    public static SoundEvent ENTITY_TUNA_HURT_EVENT = SoundEvent.of(ENTITY_TUNA_HURT_ID);
 }
