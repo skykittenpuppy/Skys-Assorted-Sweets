@@ -22,7 +22,7 @@
 			"gay.beegirl.ModClientInit"
 		],
 		"fabric-datagen": [
-			"gay.beegirl.ModDataGenerator"
+			"gay.beegirl.DataGen.ModDataGenerator"
 		]
 	},
 	"mixins": [

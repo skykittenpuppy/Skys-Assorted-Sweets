@@ -1,0 +1,72 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "discard_chance_on_air_exposure": 0.0,
+    "size": 3,
+    "targets": [
+      {
+        "state": {
+          "Name": "assortedsweets:ruby_ore"
+        },
+        "target": {
+          "block": "minecraft:stone",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "assortedsweets:granite_ruby_ore"
+        },
+        "target": {
+          "block": "minecraft:granite",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "assortedsweets:diorite_ruby_ore"
+        },
+        "target": {
+          "block": "minecraft:diorite",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "assortedsweets:andesite_ruby_ore"
+        },
+        "target": {
+          "block": "minecraft:andesite",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "assortedsweets:dripstone_ruby_ore"
+        },
+        "target": {
+          "block": "minecraft:dripstone_block",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "assortedsweets:deepslate_ruby_ore"
+        },
+        "target": {
+          "block": "minecraft:deepslate",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "assortedsweets:tuff_ruby_ore"
+        },
+        "target": {
+          "block": "minecraft:tuff",
+          "predicate_type": "minecraft:block_match"
+        }
+      }
+    ]
+  }
+}

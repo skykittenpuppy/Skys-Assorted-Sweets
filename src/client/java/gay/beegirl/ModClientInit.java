@@ -1,7 +1,9 @@
 package gay.beegirl;
 
-import gay.beegirl.CustomClasses.TunaEntityModel;
-import gay.beegirl.CustomClasses.TunaEntityRenderer;
+import gay.beegirl.Block.ModBlocks;
+import gay.beegirl.Entity.ModEntities;
+import gay.beegirl.Entity.TunaEntityModel;
+import gay.beegirl.Entity.TunaEntityRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;

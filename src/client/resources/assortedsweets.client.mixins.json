@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "gay.beegirl.mixin",
+  "package": "gay.beegirl.Mixin",
   "compatibilityLevel": "JAVA_21",
   "injectors": {
     "defaultRequire": 1

@@ -1,12 +1,12 @@
 {
 	"required": true,
-	"package": "gay.beegirl.mixin",
+	"package": "gay.beegirl.Mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"CropBlockMixin",
-		"TorchflowerBlockMixin",
-		"SweetBerryBushBlockMixin"
-	],
+      "CropBlockMixin",
+      "SweetBerryBushBlockMixin",
+      "TorchflowerBlockMixin"
+    ],
 	"injectors": {
 		"defaultRequire": 1
 	}

@@ -1,5 +1,20 @@
 {
   "values": [
-    "assortedsweets:granite_coal_ore"
+    "#minecraft:coal_ores",
+    "#minecraft:iron_ores",
+    "#minecraft:copper_ores",
+    "#minecraft:gold_ores",
+    "#minecraft:redstone_ores",
+    "#minecraft:emerald_ores",
+    "#minecraft:lapis_ores",
+    "#minecraft:diamond_ores",
+    "#minecraft:nether_quartz_ores",
+    "#assortedsweets:ruby_ores",
+    "#assortedsweets:sapphire_ores",
+    "#assortedsweets:topaz_ores",
+    "#assortedsweets:citrine_ores",
+    "#assortedsweets:alexandrite_ores",
+    "#assortedsweets:spinel_ores",
+    "#assortedsweets:white_quartz_ores"
   ]
 }

@@ -81,8 +81,8 @@
 
   "block.assortedsweets.blackstone_gold_ore": "Blackstone Gold Ore",
   "block.assortedsweets.basalt_gold_ore": "Basalt Gold Ore",
-  "block.assortedsweets.blackstone_quartz_ore": "Blackstone Quartz Ore",
-  "block.assortedsweets.basalt_quartz_ore": "Basalt Quartz Ore",
+  "block.assortedsweets.blackstone_quartz_ore": "Blackstone Nether Quartz Ore",
+  "block.assortedsweets.basalt_quartz_ore": "Basalt Nether Quartz Ore",
 
   "block.assortedsweets.white_quartz_ore": "White Quartz Ore",
   "block.assortedsweets.granite_white_quartz_ore": "Granite White Quartz Ore",
