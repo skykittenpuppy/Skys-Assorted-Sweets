@@ -27,4 +27,6 @@ public class ModEntities {
     }
 
     public static final EntityType<TunaEntity> TUNA = registerEntity("tuna",EntityType.Builder.create(TunaEntity::new, SpawnGroup.WATER_AMBIENT).dimensions(0.8F, 0.5F).eyeHeight(0.26F).maxTrackingRange(4));
+    public static final EntityType<CowEntity2> COW = registerEntity("cow",EntityType.Builder.create(CowEntity2::new, SpawnGroup.CREATURE).dimensions(0.9F, 1.4F).eyeHeight(1.3F).passengerAttachments(1.36875F).maxTrackingRange(10));
+
 }

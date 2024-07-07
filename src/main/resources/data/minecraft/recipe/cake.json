@@ -1,2 +1,9 @@
 {
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [],
+  "result": {
+    "count": 1,
+    "id": "minecraft:cake"
+  }
 }

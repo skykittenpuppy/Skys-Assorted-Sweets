@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "assortedsweets:pumpkin_slice"
+    },
+    {
+      "item": "assortedsweets:pumpkin_slice"
+    },
+    {
+      "item": "assortedsweets:pumpkin_slice"
+    },
+    {
+      "item": "assortedsweets:pumpkin_slice"
+    },
+    {
+      "item": "assortedsweets:pumpkin_slice"
+    },
+    {
+      "item": "assortedsweets:pumpkin_slice"
+    },
+    {
+      "item": "assortedsweets:pumpkin_slice"
+    },
+    {
+      "item": "assortedsweets:pumpkin_slice"
+    },
+    {
+      "item": "assortedsweets:pumpkin_slice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:pumpkin"
+  }
+}

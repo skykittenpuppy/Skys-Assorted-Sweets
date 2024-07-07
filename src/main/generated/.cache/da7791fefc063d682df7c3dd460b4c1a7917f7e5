@@ -1,12 +1,12 @@
-// 1.21	2024-07-06T19:44:59.131629324	Sky's Assorted Sweets/World Gen
+// 1.21	2024-07-07T17:50:43.270570002	Sky's Assorted Sweets/World Gen
 67a61513cdc702535fa4e662497a4dc40883b188 data/assortedsweets/worldgen/placed_feature/ore_spinel.json
 6d84c662c9612c9e7a54b3de8abe30cd56e07670 data/assortedsweets/worldgen/placed_feature/ore_alexandrite.json
 1773d188443d837782dc26ae663113d3f221934a data/assortedsweets/worldgen/configured_feature/ore_topaz.json
 7a9d94d937773847939125de047e8bd17339bca4 data/assortedsweets/worldgen/configured_feature/ore_alexandrite.json
 ea4e3ed7c08a1c934a01a3e5774edbd0a363bd74 data/assortedsweets/worldgen/placed_feature/ore_citrine.json
 5aedad46c0e99abae5764df61eb5752d5297b64b data/assortedsweets/worldgen/configured_feature/ore_sapphire.json
-abdb7bed417c0c2662a53c7d38a6148270cbc4f6 data/assortedsweets/worldgen/placed_feature/ore_sapphire.json
 88e8ca51622f369098958418b3c3538865283231 data/assortedsweets/worldgen/placed_feature/ore_white_quartz.json
+abdb7bed417c0c2662a53c7d38a6148270cbc4f6 data/assortedsweets/worldgen/placed_feature/ore_sapphire.json
 23acdf9a67ee1377fdaf56dbe2fd181cf1a175b9 data/assortedsweets/worldgen/placed_feature/ore_topaz.json
 528eea246574ae44c954728f6444ef70c26606ac data/assortedsweets/worldgen/configured_feature/ore_spinel.json
 79f8870ed458ed35f55101e101f124c219fcce19 data/assortedsweets/worldgen/placed_feature/ore_ruby.json

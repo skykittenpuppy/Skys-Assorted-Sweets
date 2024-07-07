@@ -32,7 +32,7 @@ public abstract class TorchflowerBlockMixin extends CropBlock {
 	)
 	protected void getSeedsItem(CallbackInfoReturnable<ItemConvertible> cir) {
 		cir.setReturnValue(
-				((Object)this).asItem()
+				((TorchflowerBlock)(Object)this).asItem()
 		);
 	}
 
