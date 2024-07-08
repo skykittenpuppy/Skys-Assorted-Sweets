@@ -42,7 +42,7 @@ public class ModBlocks {
         );
     }
 
-    // Copied from Cropped https://github.com/NyakoFox/cropped/blob/1.19/src/main/java/gay/nyako/cropped/CroppedMod.java
+    /* Copied from Cropped https://modrinth.com/mod/cropped */
     private static ActionResult harvestCrop (PlayerEntity player, World world, Hand hand, BlockHitResult hitResult) {
         if (player.isSneaking() || player.isSpectator()) {
             return ActionResult.PASS;

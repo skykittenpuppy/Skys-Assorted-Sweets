@@ -167,7 +167,6 @@
   "item.assortedsweets.vanilla": "Vanilla",
   "item.assortedsweets.vanilla_seeds": "Vanilla Seeds",
 
-  "item.minecraft.quartz": "Nether Quartz",
   "item.assortedsweets.white_quartz": "White Quartz",
   "item.assortedsweets.ruby": "Ruby",
   "item.assortedsweets.sapphire": "Sapphire",
@@ -178,5 +177,25 @@
 
   "subtitles.entity.tuna.death": "Tuna dies",
   "subtitles.entity.tuna.flop": "Tuna flops",
-  "subtitles.entity.tuna.hurt": "Tuna hurts"
+  "subtitles.entity.tuna.hurt": "Tuna hurts",
+
+  "item.minecraft.quartz": "Nether Quartz",
+  "trim_material.minecraft.amethyst": "Amethyst",
+  "trim_material.minecraft.copper": "Copper",
+  "trim_material.minecraft.diamond": "Diamond",
+  "trim_material.minecraft.emerald": "Emerald",
+  "trim_material.minecraft.gold": "Gold",
+  "trim_material.minecraft.iron": "Iron",
+  "trim_material.minecraft.lapis": "Lapis",
+  "trim_material.minecraft.netherite": "Netherite",
+  "trim_material.minecraft.quartz": "Nether Quartz",
+  "trim_material.minecraft.redstone": "Redstone",
+  "trim_material.assortedsweets.white_quartz": "White Quartz",
+  "trim_material.assortedsweets.ruby": "Ruby",
+  "trim_material.assortedsweets.sapphire": "Sapphire",
+  "trim_material.assortedsweets.topaz": "Topaz",
+  "trim_material.assortedsweets.citrine": "Citrine",
+  "trim_material.assortedsweets.alexandrite": "Alexandrite",
+  "trim_material.assortedsweets.spinel": "Spinel",
+  "trim_pattern.assortedsweets.tool": "Tool Trim"
 }
