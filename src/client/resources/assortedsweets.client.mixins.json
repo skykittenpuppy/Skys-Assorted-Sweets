@@ -6,6 +6,16 @@
     "defaultRequire": 1
   },
   "client": [
-    "BipedEntityModelMixin"
+    "AbstractZombieModelMixin",
+    "BipedEntityModelMixin",
+    "BoggedEntityModelMixin",
+    "BoggedEntityRendererMixin",
+    "ChickenEntityModelMixin",
+    "ChickenEntityRendererMixin",
+    "DrownedEntityModelMixin",
+    "DrownedEntityRendererMixin",
+    "PigEntityModelMixin",
+    "SkeletonEntityModelMixin",
+    "StrayEntityRendererMixin"
   ]
 }
