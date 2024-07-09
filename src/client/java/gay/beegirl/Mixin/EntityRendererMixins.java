@@ -1,18 +1,22 @@
 package gay.beegirl.Mixin;
 
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
-import net.minecraft.client.render.entity.BoggedEntityRenderer;
-import net.minecraft.client.render.entity.ChickenEntityRenderer;
-import net.minecraft.client.render.entity.DrownedEntityRenderer;
-import net.minecraft.client.render.entity.StrayEntityRenderer;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.entity.*;
 import net.minecraft.client.render.entity.feature.FeatureRenderer;
+import net.minecraft.client.render.entity.model.EntityModel;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(BoggedEntityRenderer.class)
-class BoggedEntityRendererMixin {
+abstract class BoggedEntityRendererMixin {
     @WrapWithCondition(
             method = "<init>",
             at = @At(
@@ -24,13 +28,15 @@ class BoggedEntityRendererMixin {
         return false;
     }
 }
+
 @Mixin(ChickenEntityRenderer.class)
-class ChickenEntityRendererMixin {
+abstract class ChickenEntityRendererMixin {
     @Shadow
     private static final Identifier TEXTURE = Identifier.ofVanilla("textures/entity/chicken/chicken.png");
 }
+
 @Mixin(DrownedEntityRenderer.class)
-class DrownedEntityRendererMixin {
+abstract class DrownedEntityRendererMixin {
     @WrapWithCondition(
             method = "<init>",
             at = @At(
@@ -42,8 +48,56 @@ class DrownedEntityRendererMixin {
         return false;
     }
 }
+
+@Mixin(SheepEntityRenderer.class)
+abstract class SheepEntityRendererMixin<T extends LivingEntity, M extends EntityModel<T>> extends MobEntityRenderer{
+    @Shadow
+    private static final Identifier TEXTURE = Identifier.ofVanilla("textures/entity/sheep/sheep_main.png");
+    @Unique
+    private static final Identifier DYE_TEXTURE = Identifier.ofVanilla("textures/entity/sheep/sheep_dyed.png");
+
+    public SheepEntityRendererMixin(EntityRendererFactory.Context context, EntityModel entityModel, float f) {
+        super(context, entityModel, f);
+    }
+
+    @WrapWithCondition(
+            method = "<init>",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/client/render/entity/SheepEntityRenderer;addFeature(Lnet/minecraft/client/render/entity/feature/FeatureRenderer;)Z"
+            )
+    )
+    private boolean cancelOverlayFeature(SheepEntityRenderer instance, FeatureRenderer featureRenderer) {
+        return false;
+    }
+
+    @Shadow
+    public abstract Identifier getTexture(SheepEntity sheepEntity);
+
+    @Unique
+    public Identifier getDyedTexture(SheepEntity sheepEntity) {
+        return DYE_TEXTURE;
+    }
+
+    @Override
+    public void render(LivingEntity entity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
+        // Uhoh
+    }
+
+    @Unique
+    protected RenderLayer getRenderLayer(Identifier identifier, boolean showBody, boolean translucent, boolean showOutline) {
+        if (translucent) {
+            return RenderLayer.getItemEntityTranslucentCull(identifier);
+        } else if (showBody) {
+            return this.model.getLayer(identifier);
+        } else {
+            return showOutline ? RenderLayer.getOutline(identifier) : null;
+        }
+    }
+}
+
 @Mixin(StrayEntityRenderer.class)
-class StrayEntityRendererMixin {
+abstract class StrayEntityRendererMixin {
     @WrapWithCondition(
             method = "<init>",
             at = @At(

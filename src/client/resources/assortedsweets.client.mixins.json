@@ -12,9 +12,12 @@
     "BoggedEntityRendererMixin",
     "ChickenEntityModelMixin",
     "ChickenEntityRendererMixin",
+    "CowEntityModelMixin",
     "DrownedEntityModelMixin",
     "DrownedEntityRendererMixin",
     "PigEntityModelMixin",
+    "SheepEntityModelMixin",
+    "SheepEntityRendererMixin",
     "SkeletonEntityModelMixin",
     "StrayEntityRendererMixin"
   ]
