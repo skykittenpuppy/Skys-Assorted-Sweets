@@ -13,6 +13,7 @@
     "ChickenEntityModelMixin",
     "ChickenEntityRendererMixin",
     "CowEntityModelMixin",
+    "CowEntityRendererMixin",
     "DrownedEntityModelMixin",
     "DrownedEntityRendererMixin",
     "PigEntityModelMixin",

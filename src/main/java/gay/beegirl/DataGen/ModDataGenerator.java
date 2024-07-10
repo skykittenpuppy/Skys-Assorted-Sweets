@@ -1,5 +1,7 @@
 package gay.beegirl.DataGen;
 
+import gay.beegirl.Entity.CowVariants;
+import gay.beegirl.ModRegistries;
 import gay.beegirl.World.ModConfiguredFeatures;
 import gay.beegirl.World.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -14,10 +16,10 @@ public class ModDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModBlockLootTableProvider::new);
         pack.addProvider(ModBlockTagProvider::new);
         pack.addProvider(ModItemTagProvider::new);
-        //pack.addProvider(ModLootTablesProvider::new);
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModRecipeProvider::new);
         pack.addProvider(ModWorldGenerator::new);
+        pack.addProvider(ModVariantGenerator::new);
         //pack.addProvider(VanillaNamespaceRecipeProvider::new);
     }
 
@@ -25,6 +27,6 @@ public class ModDataGenerator implements DataGeneratorEntrypoint {
     public void buildRegistry(RegistryBuilder registryBuilder) {
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
         registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
-        //registryBuilder.addRegistry(ModRegistryKeys.COW_VARIANT_KEY, CowVariants::bootstrap);
+        registryBuilder.addRegistry(ModRegistries.COW_VARIANT_KEY, CowVariants::bootstrap);
     }
 }

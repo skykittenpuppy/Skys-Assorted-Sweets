@@ -1,4 +1,4 @@
-// 1.21	2024-07-07T17:50:43.264583289	Sky's Assorted Sweets/Block Loot Tables
+// 1.21	2024-07-10T18:51:29.135868753	Sky's Assorted Sweets/Block Loot Tables
 5f3cf068347e4b987add041c73d268ebe3cd5b0f data/minecraft/loot_table/blocks/pitcher_crop.json
 72e5a70b1f7db4fd2220850c15580e3a4546992b data/assortedsweets/loot_table/blocks/tuff_lapis_ore.json
 61d59276fdb916d91d6fe8f75c601ff26e9d934a data/assortedsweets/loot_table/blocks/deepslate_topaz_ore.json
@@ -34,8 +34,8 @@ c326706574f8f5a0f1aeed34eacee11280c3027e data/minecraft/loot_table/blocks/deepsl
 1940b3cdb91c36befda3e25a7de617bfdb44b288 data/minecraft/loot_table/blocks/deepslate_coal_ore.json
 bf41a5e37750daabe381aa2102951484683879cc data/minecraft/loot_table/blocks/torchflower_crop.json
 b9405a32925c836123fe65bfe306bc20fe56c31c data/assortedsweets/loot_table/blocks/granite_white_quartz_ore.json
-46e6b56bbe0e1868f15c37b562889f9081e8de81 data/assortedsweets/loot_table/blocks/diorite_alexandrite_ore.json
 2865eadf11cbe3ec16c8b655aed32a6aa900224b data/assortedsweets/loot_table/blocks/spinel_ore.json
+46e6b56bbe0e1868f15c37b562889f9081e8de81 data/assortedsweets/loot_table/blocks/diorite_alexandrite_ore.json
 d840cbfa329f3d83467668a35f104e8176d82fb3 data/assortedsweets/loot_table/blocks/diorite_white_quartz_ore.json
 8d95699e6e8a53dd1d34f2f2d28b0fc5d0b5abd3 data/assortedsweets/loot_table/blocks/granite_gold_ore.json
 4504976b9e9d62bc5a3c5ab0659489a36c61946b data/minecraft/loot_table/blocks/deepslate_emerald_ore.json
