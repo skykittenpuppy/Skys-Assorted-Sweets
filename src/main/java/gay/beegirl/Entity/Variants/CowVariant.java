@@ -1,7 +1,8 @@
-package gay.beegirl.Entity;
+package gay.beegirl.Entity.Variants;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import gay.beegirl.Generics.VariantClass;
 import gay.beegirl.ModRegistries;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.network.RegistryByteBuf;
@@ -13,7 +14,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.Objects;
 
-public class CowVariant {
+public class CowVariant extends VariantClass {
     public static final Codec<CowVariant> CODEC = RecordCodecBuilder.create((instance) -> instance.group(
             Identifier.CODEC.fieldOf("wild_texture").forGetter((cowVariant) -> cowVariant.wildId))
             .apply(instance, CowVariant::new));
@@ -28,9 +29,6 @@ public class CowVariant {
         this.wildTextureId = getTextureId(wildId);
     }
 
-    private static Identifier getTextureId(Identifier id) {
-        return id.withPath((oldPath) -> "textures/" + oldPath + ".png");
-    }
 
     public Identifier getWildTextureId() {
         return this.wildTextureId;

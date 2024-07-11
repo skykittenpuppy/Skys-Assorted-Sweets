@@ -1,9 +1,8 @@
 package gay.beegirl.Mixin;
 
-import gay.beegirl.Entity.CowVariant;
-import gay.beegirl.Entity.CowVariants;
-import gay.beegirl.MixinInterfaces.IVariantMixinEntity;
-import gay.beegirl.ModInit;
+import gay.beegirl.Entity.Variants.CowVariant;
+import gay.beegirl.Entity.Variants.CowVariants;
+import gay.beegirl.Generics.IVariantMixinEntity;
 import gay.beegirl.ModRegistries;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
@@ -36,7 +35,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Mixin(CowEntity.class)
-public class CowEntityMixin extends PassiveEntity implements VariantHolder<RegistryEntry<CowVariant>>, IVariantMixinEntity {
+public class CowEntityMixin extends PassiveEntity implements VariantHolder<RegistryEntry<CowVariant>>, IVariantMixinEntity<CowVariant> {
     @Unique
     private static TrackedData<RegistryEntry<CowVariant>> VARIANT;
 
@@ -81,9 +80,6 @@ public class CowEntityMixin extends PassiveEntity implements VariantHolder<Regis
         Registry<CowVariant> registry = dynamicRegistryManager.get(ModRegistries.COW_VARIANT_KEY);
         Optional var10002 = registry.getEntry(CowVariants.DEFAULT);
         Objects.requireNonNull(registry);
-        ModInit.LOGGER.warn(registry.getDefaultEntry().toString());
-        ModInit.LOGGER.warn(var10002.toString());
-        ModInit.LOGGER.warn(registry.getEntry(CowVariants.BROWN).toString());
         builder.add(VARIANT, (RegistryEntry)var10002.or(registry::getDefaultEntry).orElseThrow());
     }
 

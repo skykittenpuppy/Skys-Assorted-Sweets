@@ -1,4 +1,4 @@
-package gay.beegirl.Entity;
+package gay.beegirl.Entity.Variants;
 
 import gay.beegirl.ModInit;
 import gay.beegirl.ModRegistries;
@@ -15,8 +15,8 @@ import java.util.Optional;
 public class CowVariants {
     public static final RegistryKey<CowVariant> ALBINO = of(Identifier.of(ModInit.MOD_ID, "albino"));
     public static final RegistryKey<CowVariant> ASHEN  = of(Identifier.of(ModInit.MOD_ID, "ashen"));
-    public static final RegistryKey<CowVariant> COOKIE = of(Identifier.of(ModInit.MOD_ID, "cookie"));
     public static final RegistryKey<CowVariant> BROWN  = of(Identifier.of(ModInit.MOD_ID, "brown"));
+    public static final RegistryKey<CowVariant> COOKIE = of(Identifier.of(ModInit.MOD_ID, "cookie"));
     public static final RegistryKey<CowVariant> CREAM  = of(Identifier.of(ModInit.MOD_ID, "cream"));
     public static final RegistryKey<CowVariant> DAIRY  = of(Identifier.of(ModInit.MOD_ID, "dairy"));
     public static final RegistryKey<CowVariant> PINTO  = of(Identifier.of(ModInit.MOD_ID, "pinto"));
@@ -44,13 +44,13 @@ public class CowVariants {
         register(registry, ALBINO, Identifier.of(ModInit.MOD_ID, "cow_albino"));
         register(registry, ASHEN , Identifier.of(ModInit.MOD_ID, "cow_ashen"));
         register(registry, COOKIE, Identifier.of(ModInit.MOD_ID, "cow_cookie"));
-        register(registry, BROWN,  Identifier.ofVanilla("cow"));
         register(registry, CREAM,  Identifier.of(ModInit.MOD_ID, "cow_cream"));
         register(registry, DAIRY,  Identifier.of(ModInit.MOD_ID, "cow_dairy"));
         register(registry, PINTO,  Identifier.of(ModInit.MOD_ID, "cow_pinto"));
         register(registry, SUNSET, Identifier.of(ModInit.MOD_ID, "cow_sunset"));
         register(registry, UMBRA,  Identifier.of(ModInit.MOD_ID, "cow_umbra"));
         register(registry, WOOLY,  Identifier.of(ModInit.MOD_ID, "cow_wooly"));
+        register(registry, BROWN,  Identifier.ofVanilla("cow"));
     }
 
     static {

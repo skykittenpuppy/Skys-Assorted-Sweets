@@ -1,7 +1,8 @@
 package gay.beegirl.Mixin;
 
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
-import gay.beegirl.MixinInterfaces.IVariantMixinEntity;
+import gay.beegirl.Generics.IVariantMixinDyeableEntity;
+import gay.beegirl.Generics.IVariantMixinEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.*;
@@ -9,8 +10,9 @@ import net.minecraft.client.render.entity.feature.FeatureRenderer;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.passive.CowEntity;
-import net.minecraft.entity.passive.SheepEntity;
+import net.minecraft.entity.mob.ZombieEntity;
+import net.minecraft.entity.passive.*;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -35,8 +37,14 @@ abstract class BoggedEntityRendererMixin {
 
 @Mixin(ChickenEntityRenderer.class)
 abstract class ChickenEntityRendererMixin {
-    @Shadow
-    private static final Identifier TEXTURE = Identifier.ofVanilla("textures/entity/chicken/chicken.png");
+    @Inject(
+            method = "getTexture(Lnet/minecraft/entity/passive/ChickenEntity;)Lnet/minecraft/util/Identifier;",
+            at = @At("RETURN"),
+            cancellable = true
+    )
+    public void getTexture(ChickenEntity chickenEntity, CallbackInfoReturnable<Identifier> cir){
+        cir.setReturnValue(((IVariantMixinEntity)(Object)chickenEntity).getTextureId());
+    }
 }
 
 @Mixin(CowEntityRenderer.class)
@@ -63,6 +71,55 @@ abstract class DrownedEntityRendererMixin {
     private boolean cancelOverlayFeature(DrownedEntityRenderer instance, FeatureRenderer featureRenderer) {
         return false;
     }
+
+    @Inject(
+            method = "getTexture",
+            at = @At("RETURN"),
+            cancellable = true
+    )
+    public void getTexture(ZombieEntity zombieEntity, CallbackInfoReturnable<Identifier> cir){
+        cir.setReturnValue(((IVariantMixinEntity)(Object)zombieEntity).getTextureId());
+    }
+}
+
+@Mixin(GoatEntityRenderer.class)
+abstract class GoatEntityRendererMixin {
+    @Inject(
+            method = "getTexture(Lnet/minecraft/entity/passive/GoatEntity;)Lnet/minecraft/util/Identifier;",
+            at = @At("RETURN"),
+            cancellable = true
+    )
+    public void getTexture(GoatEntity goatEntity, CallbackInfoReturnable<Identifier> cir){
+        cir.setReturnValue(((IVariantMixinEntity)(Object)goatEntity).getTextureId());
+    }
+}
+
+@Mixin(PigEntityRenderer.class)
+abstract class PigEntityRendererMixin {
+    @Inject(
+            method = "getTexture(Lnet/minecraft/entity/passive/PigEntity;)Lnet/minecraft/util/Identifier;",
+            at = @At("RETURN"),
+            cancellable = true
+    )
+    public void getTexture(PigEntity pigEntity, CallbackInfoReturnable<Identifier> cir){
+        cir.setReturnValue(((IVariantMixinEntity)(Object)pigEntity).getTextureId());
+    }
+}
+
+@Mixin(RabbitEntityRenderer.class)
+abstract class RabbitEntityRendererMixin {
+    @Inject(
+            method = "getTexture(Lnet/minecraft/entity/passive/RabbitEntity;)Lnet/minecraft/util/Identifier;",
+            at = @At("HEAD"),
+            cancellable = true
+    )
+    public void getTexture(RabbitEntity rabbitEntity, CallbackInfoReturnable<Identifier> cir){
+        if (Formatting.strip(rabbitEntity.getName().getString()).equals("Toast")) {
+            cir.setReturnValue(Identifier.ofVanilla("entity/rabbit/rabbit_toast"));
+        } else {
+            cir.setReturnValue(((IVariantMixinEntity)(Object)rabbitEntity).getTextureId());
+        }
+    }
 }
 
 @Mixin(SheepEntityRenderer.class)
@@ -87,12 +144,18 @@ abstract class SheepEntityRendererMixin<T extends LivingEntity, M extends Entity
         return false;
     }
 
-    @Shadow
-    public abstract Identifier getTexture(SheepEntity sheepEntity);
+    @Inject(
+            method = "getTexture(Lnet/minecraft/entity/passive/SheepEntity;)Lnet/minecraft/util/Identifier;",
+            at = @At("RETURN"),
+            cancellable = true
+    )
+    public void getTexture(SheepEntity sheepEntity, CallbackInfoReturnable<Identifier> cir){
+        cir.setReturnValue(((IVariantMixinEntity)(Object)sheepEntity).getTextureId());
+    }
 
     @Unique
     public Identifier getDyedTexture(SheepEntity sheepEntity) {
-        return DYE_TEXTURE;
+        return ((IVariantMixinDyeableEntity)(Object)sheepEntity).getDyedTextureId();
     }
 
     @Override

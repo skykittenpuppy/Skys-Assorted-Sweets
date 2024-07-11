@@ -14,7 +14,13 @@ public class ModVariantGenerator extends FabricDynamicRegistryProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
+        entries.addAll(registries.getWrapperOrThrow(ModRegistries.CHICKEN_VARIANT_KEY));
         entries.addAll(registries.getWrapperOrThrow(ModRegistries.COW_VARIANT_KEY));
+        entries.addAll(registries.getWrapperOrThrow(ModRegistries.DROWNED_VARIANT_KEY));
+        entries.addAll(registries.getWrapperOrThrow(ModRegistries.GOAT_VARIANT_KEY));
+        entries.addAll(registries.getWrapperOrThrow(ModRegistries.PIG_VARIANT_KEY));
+        entries.addAll(registries.getWrapperOrThrow(ModRegistries.RABBIT_VARIANT_KEY));
+        entries.addAll(registries.getWrapperOrThrow(ModRegistries.SHEEP_VARIANT_KEY));
     }
 
     @Override
