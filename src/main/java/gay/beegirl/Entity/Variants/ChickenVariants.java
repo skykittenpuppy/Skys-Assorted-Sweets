@@ -8,9 +8,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-
-import java.util.Objects;
-import java.util.Optional;
+import net.minecraft.world.ServerWorldAccess;
 
 public class ChickenVariants {
     public static final RegistryKey<ChickenVariant> AMBER = of(Identifier.of(ModInit.MOD_ID, "amber"));
@@ -32,11 +30,9 @@ public class ChickenVariants {
         registry.register(key, new ChickenVariant(textureName.withPrefixedPath("entity/chicken/")));
     }
 
-    public static RegistryEntry<ChickenVariant> getRandom(DynamicRegistryManager dynamicRegistryManager) {
+    public static RegistryEntry<ChickenVariant> getRandom(DynamicRegistryManager dynamicRegistryManager, ServerWorldAccess world) {
         Registry<ChickenVariant> registry = dynamicRegistryManager.get(ModRegistries.CHICKEN_VARIANT_KEY);
-        Optional<RegistryEntry.Reference<ChickenVariant>> var10000 = registry.streamEntries().findAny();
-        Objects.requireNonNull(registry);
-        return var10000.or(registry::getDefaultEntry).orElseThrow();
+        return registry.getRandom(world.getRandom()).or(registry::getDefaultEntry).orElseThrow();
     }
 
     public static void bootstrap(Registerable<ChickenVariant> registry) {

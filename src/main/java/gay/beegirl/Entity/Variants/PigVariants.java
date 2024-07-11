@@ -8,9 +8,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-
-import java.util.Objects;
-import java.util.Optional;
+import net.minecraft.world.ServerWorldAccess;
 
 public class PigVariants {
     public static final RegistryKey<PigVariant> MOTTLED = of(Identifier.of(ModInit.MOD_ID, "mottled"));
@@ -32,11 +30,9 @@ public class PigVariants {
         registry.register(key, new PigVariant(textureName.withPrefixedPath("entity/pig/")));
     }
 
-    public static RegistryEntry<PigVariant> getRandom(DynamicRegistryManager dynamicRegistryManager) {
+    public static RegistryEntry<PigVariant> getRandom(DynamicRegistryManager dynamicRegistryManager, ServerWorldAccess world) {
         Registry<PigVariant> registry = dynamicRegistryManager.get(ModRegistries.PIG_VARIANT_KEY);
-        Optional<RegistryEntry.Reference<PigVariant>> var10000 = registry.streamEntries().findAny();
-        Objects.requireNonNull(registry);
-        return var10000.or(registry::getDefaultEntry).orElseThrow();
+        return registry.getRandom(world.getRandom()).or(registry::getDefaultEntry).orElseThrow();
     }
 
     public static void bootstrap(Registerable<PigVariant> registry) {

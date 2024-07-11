@@ -1,14 +1,12 @@
 package gay.beegirl.Mixin;
 
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
-import gay.beegirl.Generics.IVariantMixinDyeableEntity;
 import gay.beegirl.Generics.IVariantMixinEntity;
+import gay.beegirl.Generics.IVariantMixinSheepEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.*;
 import net.minecraft.client.render.entity.feature.FeatureRenderer;
 import net.minecraft.client.render.entity.model.EntityModel;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.passive.*;
@@ -150,18 +148,18 @@ abstract class SheepEntityRendererMixin<T extends LivingEntity, M extends Entity
             cancellable = true
     )
     public void getTexture(SheepEntity sheepEntity, CallbackInfoReturnable<Identifier> cir){
-        cir.setReturnValue(((IVariantMixinEntity)(Object)sheepEntity).getTextureId());
+        cir.setReturnValue(((IVariantMixinSheepEntity)(Object)sheepEntity).getTextureId());
     }
 
     @Unique
     public Identifier getDyedTexture(SheepEntity sheepEntity) {
-        return ((IVariantMixinDyeableEntity)(Object)sheepEntity).getDyedTextureId();
+        return ((IVariantMixinSheepEntity)(Object)sheepEntity).getDyedTextureId();
     }
 
-    @Override
-    public void render(LivingEntity entity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
-        // Uhoh
-    }
+//    @Override
+//    public void render(LivingEntity entity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
+//        // Uhoh
+//    }
 
     @Unique
     protected RenderLayer getRenderLayer(Identifier identifier, boolean showBody, boolean translucent, boolean showOutline) {

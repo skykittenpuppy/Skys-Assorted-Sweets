@@ -8,9 +8,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-
-import java.util.Objects;
-import java.util.Optional;
+import net.minecraft.world.ServerWorldAccess;
 
 public class GoatVariants {
     public static final RegistryKey<GoatVariant> BLACK = of(Identifier.of(ModInit.MOD_ID, "black"));
@@ -25,11 +23,9 @@ public class GoatVariants {
         registry.register(key, new GoatVariant(textureName.withPrefixedPath("entity/goat/")));
     }
 
-    public static RegistryEntry<GoatVariant> getRandom(DynamicRegistryManager dynamicRegistryManager) {
+    public static RegistryEntry<GoatVariant> getRandom(DynamicRegistryManager dynamicRegistryManager, ServerWorldAccess world) {
         Registry<GoatVariant> registry = dynamicRegistryManager.get(ModRegistries.GOAT_VARIANT_KEY);
-        Optional<RegistryEntry.Reference<GoatVariant>> var10000 = registry.streamEntries().findAny();
-        Objects.requireNonNull(registry);
-        return var10000.or(registry::getDefaultEntry).orElseThrow();
+        return registry.getRandom(world.getRandom()).or(registry::getDefaultEntry).orElseThrow();
     }
 
     public static void bootstrap(Registerable<GoatVariant> registry) {

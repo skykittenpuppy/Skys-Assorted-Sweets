@@ -8,9 +8,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-
-import java.util.Objects;
-import java.util.Optional;
+import net.minecraft.world.ServerWorldAccess;
 
 public class CowVariants {
     public static final RegistryKey<CowVariant> ALBINO = of(Identifier.of(ModInit.MOD_ID, "albino"));
@@ -33,11 +31,9 @@ public class CowVariants {
         registry.register(key, new CowVariant(textureName.withPrefixedPath("entity/cow/")));
     }
 
-    public static RegistryEntry<CowVariant> getRandom(DynamicRegistryManager dynamicRegistryManager) {
+    public static RegistryEntry<CowVariant> getRandom(DynamicRegistryManager dynamicRegistryManager, ServerWorldAccess world) {
         Registry<CowVariant> registry = dynamicRegistryManager.get(ModRegistries.COW_VARIANT_KEY);
-        Optional<RegistryEntry.Reference<CowVariant>> var10000 = registry.streamEntries().findAny();
-        Objects.requireNonNull(registry);
-        return var10000.or(registry::getDefaultEntry).orElseThrow();
+        return registry.getRandom(world.getRandom()).or(registry::getDefaultEntry).orElseThrow();
     }
 
     public static void bootstrap(Registerable<CowVariant> registry) {

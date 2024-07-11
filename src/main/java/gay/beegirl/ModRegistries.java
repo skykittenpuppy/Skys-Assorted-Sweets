@@ -9,13 +9,13 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
 public class ModRegistries {
-    public static RegistryKey<Registry<ChickenVariant>> CHICKEN_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("chicken_variant"));
-    public static RegistryKey<Registry<CowVariant>> COW_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("cow_variant"));
-    public static RegistryKey<Registry<DrownedVariant>> DROWNED_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("drowned_variant"));
-    public static RegistryKey<Registry<GoatVariant>> GOAT_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("goat_variant"));
-    public static RegistryKey<Registry<PigVariant>> PIG_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("pig_variant"));
-    public static RegistryKey<Registry<RabbitVariant>> RABBIT_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("rabbit_variant"));
-    public static RegistryKey<Registry<SheepVariant>> SHEEP_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("sheep_variant"));
+    public static RegistryKey<Registry<ChickenVariant>> CHICKEN_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("variant/chicken"));
+    public static RegistryKey<Registry<CowVariant>> COW_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("variant/cow"));
+    public static RegistryKey<Registry<DrownedVariant>> DROWNED_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("variant/drowned"));
+    public static RegistryKey<Registry<GoatVariant>> GOAT_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("variant/goat"));
+    public static RegistryKey<Registry<PigVariant>> PIG_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("variant/pig"));
+    public static RegistryKey<Registry<RabbitVariant>> RABBIT_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("variant/rabbit"));
+    public static RegistryKey<Registry<SheepVariant>> SHEEP_VARIANT_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("variant/sheep"));
     public static TrackedDataHandler<RegistryEntry<ChickenVariant>> CHICKEN_VARIANT_TRACKED;
     public static TrackedDataHandler<RegistryEntry<CowVariant>> COW_VARIANT_TRACKED;
     public static TrackedDataHandler<RegistryEntry<DrownedVariant>> DROWNED_VARIANT_TRACKED;

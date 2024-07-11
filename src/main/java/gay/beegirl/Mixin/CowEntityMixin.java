@@ -102,11 +102,11 @@ public class CowEntityMixin extends PassiveEntity implements VariantHolder<Regis
 
     @Nullable
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData) {
-        RegistryEntry variant;
+        RegistryEntry<CowVariant> variant;
         if (entityData instanceof CowVariant.CowData cowData) {
             variant = cowData.variant;
         } else {
-            variant = CowVariants.getRandom(this.getRegistryManager());
+            variant = CowVariants.getRandom(this.getRegistryManager(), world);
             entityData = new CowVariant.CowData(variant);
         }
 

@@ -35,10 +35,10 @@ public class SheepVariant extends VariantClass {
     }
 
     protected static Identifier getTextureId(Identifier id) {
-        return id.withPath((oldPath) -> "textures/" + oldPath + "_main.png");
+        return id.withPath((oldPath) -> "textures/" + oldPath + ".png");
     }
     protected static Identifier getDyedTextureId(Identifier id) {
-        return id.withPath((oldPath) -> "textures/" + oldPath + "_dyed.png");
+        return id.withPath((oldPath) -> "textures/" + oldPath + ".png");
     }
 
     public Identifier getWildTextureId() {

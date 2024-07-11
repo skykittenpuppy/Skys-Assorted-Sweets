@@ -8,9 +8,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-
-import java.util.Objects;
-import java.util.Optional;
+import net.minecraft.world.ServerWorldAccess;
 
 public class SheepVariants {
     public static final RegistryKey<SheepVariant> FLECKED = of(Identifier.of(ModInit.MOD_ID, "flecked"));
@@ -31,11 +29,9 @@ public class SheepVariants {
         registry.register(key, new SheepVariant(textureName.withSuffixedPath("_main"), textureName.withSuffixedPath("_dyed")));
     }
 
-    public static RegistryEntry<SheepVariant> getRandom(DynamicRegistryManager dynamicRegistryManager) {
+    public static RegistryEntry<SheepVariant> getRandom(DynamicRegistryManager dynamicRegistryManager, ServerWorldAccess world) {
         Registry<SheepVariant> registry = dynamicRegistryManager.get(ModRegistries.SHEEP_VARIANT_KEY);
-        Optional<RegistryEntry.Reference<SheepVariant>> var10000 = registry.streamEntries().findAny();
-        Objects.requireNonNull(registry);
-        return var10000.or(registry::getDefaultEntry).orElseThrow();
+        return registry.getRandom(world.getRandom()).or(registry::getDefaultEntry).orElseThrow();
     }
 
     public static void bootstrap(Registerable<SheepVariant> registry) {

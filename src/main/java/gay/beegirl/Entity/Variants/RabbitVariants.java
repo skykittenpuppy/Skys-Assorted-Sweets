@@ -8,9 +8,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.ServerWorldAccess;
 
-import java.util.Objects;
-import java.util.Optional;
+import java.util.List;
 
 public class RabbitVariants {
     public static final RegistryKey<RabbitVariant> BLACK = of(Identifier.of(ModInit.MOD_ID, "black"));
@@ -35,11 +35,13 @@ public class RabbitVariants {
         registry.register(key, new RabbitVariant(textureName.withPrefixedPath("entity/rabbit/")));
     }
 
-    public static RegistryEntry<RabbitVariant> getRandom(DynamicRegistryManager dynamicRegistryManager) {
+    public static RegistryEntry<RabbitVariant> getRandom(DynamicRegistryManager dynamicRegistryManager, ServerWorldAccess world) {
         Registry<RabbitVariant> registry = dynamicRegistryManager.get(ModRegistries.RABBIT_VARIANT_KEY);
-        Optional<RegistryEntry.Reference<RabbitVariant>> var10000 = registry.streamEntries().findAny();
-        Objects.requireNonNull(registry);
-        return var10000.or(registry::getDefaultEntry).orElseThrow();
+        List<RegistryEntry.Reference<RabbitVariant>> filtered = registry.streamEntries()
+                .filter((entry) -> !entry.registryKey().equals(CAERBANNOG))
+                .toList();
+        return filtered.get(world.getRandom().nextInt(filtered.size()));
+
     }
 
     public static void bootstrap(Registerable<RabbitVariant> registry) {

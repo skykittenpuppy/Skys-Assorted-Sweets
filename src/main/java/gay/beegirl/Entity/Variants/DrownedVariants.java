@@ -8,9 +8,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-
-import java.util.Objects;
-import java.util.Optional;
+import net.minecraft.world.ServerWorldAccess;
 
 public class DrownedVariants {
     public static final RegistryKey<DrownedVariant> CHAIN  = of(Identifier.of(ModInit.MOD_ID, "chain"));
@@ -23,14 +21,12 @@ public class DrownedVariants {
     }
 
     static void register(Registerable<DrownedVariant> registry, RegistryKey<DrownedVariant> key, Identifier textureName) {
-        registry.register(key, new DrownedVariant(textureName.withPrefixedPath("entity/drowned/")));
+        registry.register(key, new DrownedVariant(textureName.withPrefixedPath("entity/zombie/")));
     }
 
-    public static RegistryEntry<DrownedVariant> getRandom(DynamicRegistryManager dynamicRegistryManager) {
+    public static RegistryEntry<DrownedVariant> getRandom(DynamicRegistryManager dynamicRegistryManager, ServerWorldAccess world) {
         Registry<DrownedVariant> registry = dynamicRegistryManager.get(ModRegistries.DROWNED_VARIANT_KEY);
-        Optional<RegistryEntry.Reference<DrownedVariant>> var10000 = registry.streamEntries().findAny();
-        Objects.requireNonNull(registry);
-        return var10000.or(registry::getDefaultEntry).orElseThrow();
+        return registry.getRandom(world.getRandom()).or(registry::getDefaultEntry).orElseThrow();
     }
 
     public static void bootstrap(Registerable<DrownedVariant> registry) {
