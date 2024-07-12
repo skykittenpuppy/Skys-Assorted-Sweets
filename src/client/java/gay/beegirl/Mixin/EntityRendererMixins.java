@@ -16,7 +16,6 @@ import net.minecraft.entity.mob.DrownedEntity;
 import net.minecraft.entity.mob.StrayEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.passive.*;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -109,7 +108,7 @@ abstract class PigEntityRendererMixin {
         cir.setReturnValue(((IVariantMixinEntity<?>)(Object)pigEntity).getTextureId());
     }
 }
-
+/*
 @Mixin(RabbitEntityRenderer.class)
 abstract class RabbitEntityRendererMixin {
     @Inject(
@@ -125,7 +124,7 @@ abstract class RabbitEntityRendererMixin {
         }
     }
 }
-
+*/
 @Mixin(SheepEntityRenderer.class)
 abstract class SheepEntityRendererMixin<T extends LivingEntity, M extends EntityModel<T>> extends MobEntityRenderer<SheepEntity, EntityModel<SheepEntity>>{
     @Shadow
