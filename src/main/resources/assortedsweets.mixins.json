@@ -8,8 +8,10 @@
 		"CowEntityMixin",
 		"CropBlockMixin",
 		"DrownedEntityMixin",
+		"FleeGoalMixin",
 		"GoatEntityMixin",
 		"PigEntityMixin",
+		"RabbitEntityMixin",
 		"SheepEntityMixin",
 		"SweetBerryBushBlockMixin",
 		"TorchflowerBlockMixin"

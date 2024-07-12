@@ -6,8 +6,14 @@ import gay.beegirl.Generics.IVariantMixinSheepEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.*;
 import net.minecraft.client.render.entity.feature.FeatureRenderer;
+import net.minecraft.client.render.entity.model.BoggedEntityModel;
 import net.minecraft.client.render.entity.model.EntityModel;
+import net.minecraft.client.render.entity.model.SkeletonEntityModel;
+import net.minecraft.client.render.entity.model.ZombieEntityModel;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.mob.BoggedEntity;
+import net.minecraft.entity.mob.DrownedEntity;
+import net.minecraft.entity.mob.StrayEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.passive.*;
 import net.minecraft.util.Formatting;
@@ -28,7 +34,7 @@ abstract class BoggedEntityRendererMixin {
                     target = "Lnet/minecraft/client/render/entity/BoggedEntityRenderer;addFeature(Lnet/minecraft/client/render/entity/feature/FeatureRenderer;)Z"
             )
     )
-    private boolean cancelOverlayFeature(BoggedEntityRenderer instance, FeatureRenderer featureRenderer) {
+    private boolean cancelOverlayFeature(BoggedEntityRenderer instance, FeatureRenderer<BoggedEntity, BoggedEntityModel> featureRenderer) {
         return false;
     }
 }
@@ -41,7 +47,7 @@ abstract class ChickenEntityRendererMixin {
             cancellable = true
     )
     public void getTexture(ChickenEntity chickenEntity, CallbackInfoReturnable<Identifier> cir){
-        cir.setReturnValue(((IVariantMixinEntity)(Object)chickenEntity).getTextureId());
+        cir.setReturnValue(((IVariantMixinEntity<?>)(Object)chickenEntity).getTextureId());
     }
 }
 
@@ -53,7 +59,7 @@ abstract class CowEntityRendererMixin {
             cancellable = true
     )
     public void getTexture(CowEntity cowEntity, CallbackInfoReturnable<Identifier> cir){
-        cir.setReturnValue(((IVariantMixinEntity)(Object)cowEntity).getTextureId());
+        cir.setReturnValue(((IVariantMixinEntity<?>)(Object)cowEntity).getTextureId());
     }
 }
 
@@ -66,7 +72,7 @@ abstract class DrownedEntityRendererMixin {
                     target = "Lnet/minecraft/client/render/entity/DrownedEntityRenderer;addFeature(Lnet/minecraft/client/render/entity/feature/FeatureRenderer;)Z"
             )
     )
-    private boolean cancelOverlayFeature(DrownedEntityRenderer instance, FeatureRenderer featureRenderer) {
+    private boolean cancelOverlayFeature(DrownedEntityRenderer instance, FeatureRenderer<DrownedEntity, ZombieEntityModel<DrownedEntity>> featureRenderer) {
         return false;
     }
 
@@ -76,7 +82,7 @@ abstract class DrownedEntityRendererMixin {
             cancellable = true
     )
     public void getTexture(ZombieEntity zombieEntity, CallbackInfoReturnable<Identifier> cir){
-        cir.setReturnValue(((IVariantMixinEntity)(Object)zombieEntity).getTextureId());
+        cir.setReturnValue(((IVariantMixinEntity<?>)(Object)zombieEntity).getTextureId());
     }
 }
 
@@ -88,7 +94,7 @@ abstract class GoatEntityRendererMixin {
             cancellable = true
     )
     public void getTexture(GoatEntity goatEntity, CallbackInfoReturnable<Identifier> cir){
-        cir.setReturnValue(((IVariantMixinEntity)(Object)goatEntity).getTextureId());
+        cir.setReturnValue(((IVariantMixinEntity<?>)(Object)goatEntity).getTextureId());
     }
 }
 
@@ -100,7 +106,7 @@ abstract class PigEntityRendererMixin {
             cancellable = true
     )
     public void getTexture(PigEntity pigEntity, CallbackInfoReturnable<Identifier> cir){
-        cir.setReturnValue(((IVariantMixinEntity)(Object)pigEntity).getTextureId());
+        cir.setReturnValue(((IVariantMixinEntity<?>)(Object)pigEntity).getTextureId());
     }
 }
 
@@ -115,19 +121,19 @@ abstract class RabbitEntityRendererMixin {
         if (Formatting.strip(rabbitEntity.getName().getString()).equals("Toast")) {
             cir.setReturnValue(Identifier.ofVanilla("entity/rabbit/rabbit_toast"));
         } else {
-            cir.setReturnValue(((IVariantMixinEntity)(Object)rabbitEntity).getTextureId());
+            cir.setReturnValue(((IVariantMixinEntity<?>)(Object)rabbitEntity).getTextureId());
         }
     }
 }
 
 @Mixin(SheepEntityRenderer.class)
-abstract class SheepEntityRendererMixin<T extends LivingEntity, M extends EntityModel<T>> extends MobEntityRenderer{
+abstract class SheepEntityRendererMixin<T extends LivingEntity, M extends EntityModel<T>> extends MobEntityRenderer<SheepEntity, EntityModel<SheepEntity>>{
     @Shadow
     private static final Identifier TEXTURE = Identifier.ofVanilla("textures/entity/sheep/sheep_main.png");
     @Unique
     private static final Identifier DYE_TEXTURE = Identifier.ofVanilla("textures/entity/sheep/sheep_dyed.png");
 
-    public SheepEntityRendererMixin(EntityRendererFactory.Context context, EntityModel entityModel, float f) {
+    public SheepEntityRendererMixin(EntityRendererFactory.Context context, EntityModel<SheepEntity> entityModel, float f) {
         super(context, entityModel, f);
     }
 
@@ -138,7 +144,7 @@ abstract class SheepEntityRendererMixin<T extends LivingEntity, M extends Entity
                     target = "Lnet/minecraft/client/render/entity/SheepEntityRenderer;addFeature(Lnet/minecraft/client/render/entity/feature/FeatureRenderer;)Z"
             )
     )
-    private boolean cancelOverlayFeature(SheepEntityRenderer instance, FeatureRenderer featureRenderer) {
+    private boolean cancelOverlayFeature(SheepEntityRenderer instance, FeatureRenderer<SheepEntity, EntityModel<SheepEntity>> featureRenderer) {
         return false;
     }
 
@@ -148,12 +154,12 @@ abstract class SheepEntityRendererMixin<T extends LivingEntity, M extends Entity
             cancellable = true
     )
     public void getTexture(SheepEntity sheepEntity, CallbackInfoReturnable<Identifier> cir){
-        cir.setReturnValue(((IVariantMixinSheepEntity)(Object)sheepEntity).getTextureId());
+        cir.setReturnValue(((IVariantMixinSheepEntity<?>)(Object)sheepEntity).getTextureId());
     }
 
     @Unique
     public Identifier getDyedTexture(SheepEntity sheepEntity) {
-        return ((IVariantMixinSheepEntity)(Object)sheepEntity).getDyedTextureId();
+        return ((IVariantMixinSheepEntity<?>)(Object)sheepEntity).getDyedTextureId();
     }
 
 //    @Override
@@ -182,7 +188,7 @@ abstract class StrayEntityRendererMixin {
                     target = "Lnet/minecraft/client/render/entity/StrayEntityRenderer;addFeature(Lnet/minecraft/client/render/entity/feature/FeatureRenderer;)Z"
             )
     )
-    private boolean cancelOverlayFeature(StrayEntityRenderer instance, FeatureRenderer featureRenderer) {
+    private boolean cancelOverlayFeature(StrayEntityRenderer instance, FeatureRenderer<StrayEntity, SkeletonEntityModel<StrayEntity>> featureRenderer) {
         return false;
     }
 }
