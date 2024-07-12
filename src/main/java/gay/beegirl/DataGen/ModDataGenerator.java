@@ -33,7 +33,7 @@ public class ModDataGenerator implements DataGeneratorEntrypoint {
         registryBuilder.addRegistry(ModRegistries.DROWNED_VARIANT_KEY, DrownedVariants::bootstrap);
         registryBuilder.addRegistry(ModRegistries.GOAT_VARIANT_KEY, GoatVariants::bootstrap);
         registryBuilder.addRegistry(ModRegistries.PIG_VARIANT_KEY, PigVariants::bootstrap);
-        registryBuilder.addRegistry(ModRegistries.RABBIT_VARIANT_KEY, RabbitVariants::bootstrap);
+        //registryBuilder.addRegistry(ModRegistries.RABBIT_VARIANT_KEY, RabbitVariants::bootstrap);
         registryBuilder.addRegistry(ModRegistries.SHEEP_VARIANT_KEY, SheepVariants::bootstrap);
     }
 }

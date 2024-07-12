@@ -19,7 +19,6 @@
     "GoatEntityRendererMixin",
     "PigEntityModelMixin",
     "PigEntityRendererMixin",
-    "RabbitEntityRendererMixin",
     "SheepEntityModelMixin",
     "SheepEntityRendererMixin",
     "SkeletonEntityModelMixin",

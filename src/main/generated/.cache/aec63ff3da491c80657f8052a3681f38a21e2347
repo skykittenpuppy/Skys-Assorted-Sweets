@@ -1,4 +1,4 @@
-// 1.21	2024-07-11T19:41:36.981600894	Sky's Assorted Sweets/Block Loot Tables
+// 1.21	2024-07-12T22:51:46.459694882	Sky's Assorted Sweets/Block Loot Tables
 5f3cf068347e4b987add041c73d268ebe3cd5b0f data/minecraft/loot_table/blocks/pitcher_crop.json
 72e5a70b1f7db4fd2220850c15580e3a4546992b data/assortedsweets/loot_table/blocks/tuff_lapis_ore.json
 61d59276fdb916d91d6fe8f75c601ff26e9d934a data/assortedsweets/loot_table/blocks/deepslate_topaz_ore.json
@@ -20,9 +20,9 @@ da4122fea2a13d96a2aad25246443a2e42c3d9ec data/assortedsweets/loot_table/blocks/a
 008e0c3257f8788210768dccf0dae288c31ce042 data/assortedsweets/loot_table/blocks/granite_ruby_ore.json
 a1ab86be0515f160b492bce85696f05d4edcb701 data/assortedsweets/loot_table/blocks/dripstone_gold_ore.json
 a8527cdde93c46202e968c96cc93400c15d06c5e data/assortedsweets/loot_table/blocks/sapphire_ore.json
-96fb1493d030be4f4c3fd05dfd915885f8b60fac data/assortedsweets/loot_table/blocks/granite_citrine_ore.json
-8dd1377e369df7f04829c74147e098ae355eae58 data/assortedsweets/loot_table/blocks/granite_iron_ore.json
 77ddc0faf88a17c011663dae54d20c2434b29074 data/minecraft/loot_table/blocks/nether_gold_ore.json
+8dd1377e369df7f04829c74147e098ae355eae58 data/assortedsweets/loot_table/blocks/granite_iron_ore.json
+96fb1493d030be4f4c3fd05dfd915885f8b60fac data/assortedsweets/loot_table/blocks/granite_citrine_ore.json
 89282cc6faa0a35c7d989723a8b3f4a7915f10b5 data/assortedsweets/loot_table/blocks/potted_lavender.json
 b5c003eeefaccb501fa004eef965a98c0e4d44fb data/minecraft/loot_table/blocks/pumpkin.json
 19797fa144b03c33eee464e9c61b3293d1788ca8 data/assortedsweets/loot_table/blocks/sour_berry_bush.json
