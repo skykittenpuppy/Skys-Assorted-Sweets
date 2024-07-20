@@ -1,4 +1,4 @@
-// 1.21	2024-07-12T22:51:46.459163061	Sky's Assorted Sweets/Variants
+// 1.21	2024-07-20T11:05:13.788358745	Sky's Assorted Sweets/Variants
 92eb6daaa0f3f8262899e27ce95b36f80819706a data/assortedsweets/variant/chicken/amber.json
 f0ef803aa2b821be59aeee56f4666c2e70c559af data/assortedsweets/variant/pig/pale.json
 342d8b61e3ae3caa01d421731d9d4b3afe1609ce data/assortedsweets/variant/cow/sunset.json
@@ -26,15 +26,15 @@ da6ddd9600a28d2e96c40b5a1f90a68445b6a5d6 data/assortedsweets/variant/cow/pinto.j
 817bcb7bf2e9efc5493d5497d3b3b524315c69c3 data/assortedsweets/variant/sheep/patched.json
 4f98bad8bc195e146deb84532ab247e102381868 data/assortedsweets/variant/sheep/fuzzy.json
 e30eeb2915a34c4a22fde899d06a8c063362476d data/assortedsweets/variant/cow/umbra.json
-c8e86a1845f1bb2fbb32d9f558da5afe464b69f3 data/assortedsweets/variant/chicken/stormy.json
 f8081e8ba46ddee70e094485125e0f3ae3dd1c9d data/assortedsweets/variant/chicken/gold_crested.json
+c8e86a1845f1bb2fbb32d9f558da5afe464b69f3 data/assortedsweets/variant/chicken/stormy.json
 5597ae4fe6de7cceb61784aef376a0fd87ec5200 data/assortedsweets/variant/chicken/bronzed.json
 f2d6c418135da3c36d817117256037dc9396823b data/assortedsweets/variant/drowned/chain.json
 dd807b2cf4df77ca7b30dcc45736dabe961dc53f data/assortedsweets/variant/cow/dairy.json
 90fdbde9490384fbf02366bda5bb8ae241692d69 data/assortedsweets/variant/goat/white.json
 9159d0f632d8e07edefcd38583bd666f3caeff9e data/assortedsweets/variant/chicken/skewbald.json
 e7261529d384e7b2e6da9060b2eb7fceccb59b3d data/assortedsweets/variant/chicken/mallard.json
-f841ef230f514befada63b22854cf6e8aba42cb8 data/assortedsweets/variant/chicken/fancy.json
 4df095ee20dcf159647031a48aace0ac30196f7d data/assortedsweets/variant/chicken/midnight.json
+f841ef230f514befada63b22854cf6e8aba42cb8 data/assortedsweets/variant/chicken/fancy.json
 09f5d6d64225e6ffa4b1ce3f48aa4031017ac418 data/assortedsweets/variant/cow/albino.json
 557615c9202c538f91c24de05be1fd5be9de9ba2 data/assortedsweets/variant/cow/cookie.json

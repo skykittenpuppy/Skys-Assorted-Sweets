@@ -1,20 +1,21 @@
 {
-	"required": true,
-	"package": "gay.beegirl.Mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ArmorTrimMixin",
-		"ChickenEntityMixin",
-		"CowEntityMixin",
-		"CropBlockMixin",
-		"DrownedEntityMixin",
-		"GoatEntityMixin",
-		"PigEntityMixin",
-		"SheepEntityMixin",
-		"SweetBerryBushBlockMixin",
-		"TorchflowerBlockMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "gay.beegirl.Mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ArmorTrimMixin",
+    "ChickenEntityMixin",
+    "CowEntityMixin",
+    "CropBlockMixin",
+    "DrownedEntityMixin",
+    "FeatureFlagsMixin",
+    "GoatEntityMixin",
+    "PigEntityMixin",
+    "SheepEntityMixin",
+    "SweetBerryBushBlockMixin",
+    "TorchflowerBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

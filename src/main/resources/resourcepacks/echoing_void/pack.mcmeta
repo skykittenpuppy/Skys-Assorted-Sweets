@@ -1,0 +1,11 @@
+{
+    "pack": {
+        "pack_format": 48,
+        "description": "Enables WIP End Blocks"
+    },
+    "features": {
+        "enabled": [
+            "assortedsweets:echoing_void"
+        ]
+    }
+}

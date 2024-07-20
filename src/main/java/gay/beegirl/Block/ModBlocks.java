@@ -1,5 +1,6 @@
 package gay.beegirl.Block;
 
+import gay.beegirl.ModFeatureFlags;
 import gay.beegirl.ModInit;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.block.*;
@@ -322,4 +323,6 @@ public class ModBlocks {
     public static final Block DRIPSTONE_SPINEL_ORE = registerBlock("dripstone_spinel_ore", new Block(AbstractBlock.Settings.copy(Blocks.TUFF)), true);
     public static final Block DEEPSLATE_SPINEL_ORE = registerBlock("deepslate_spinel_ore", new Block(AbstractBlock.Settings.copy(Blocks.DEEPSLATE)), true);
     public static final Block TUFF_SPINEL_ORE = registerBlock("tuff_spinel_ore", new Block(AbstractBlock.Settings.copy(Blocks.TUFF)), true);
+
+    public static final Block TESTING = registerBlock("testing", new Block(AbstractBlock.Settings.copy(Blocks.STONE).requires(ModFeatureFlags.ECHOING_VOID)), true);
 }
