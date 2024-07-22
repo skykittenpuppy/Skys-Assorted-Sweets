@@ -10,6 +10,7 @@
     "DrownedEntityMixin",
     "FeatureFlagsMixin",
     "GoatEntityMixin",
+    "ItemGroupMixin",
     "PigEntityMixin",
     "SheepEntityMixin",
     "SweetBerryBushBlockMixin",

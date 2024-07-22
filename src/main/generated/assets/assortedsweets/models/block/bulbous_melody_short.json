@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "assortedsweets:block/bulbous_melody_short"
+  }
+}

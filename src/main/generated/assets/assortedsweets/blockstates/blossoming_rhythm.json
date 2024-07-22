@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "assortedsweets:block/blossoming_rhythm_bottom"
+    },
+    "half=upper": {
+      "model": "assortedsweets:block/blossoming_rhythm_top"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "assortedsweets:block/end_stone_harmonic_pillar_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "assortedsweets:block/end_stone_harmonic_pillar"
+    },
+    "axis=z": {
+      "model": "assortedsweets:block/end_stone_harmonic_pillar_horizontal",
+      "x": 90
+    }
+  }
+}

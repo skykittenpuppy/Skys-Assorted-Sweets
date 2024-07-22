@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "assortedsweets:block/viridacite",
+    "side": "assortedsweets:block/lurid_ephyta_side",
+    "top": "assortedsweets:block/lurid_ephyta"
+  }
+}

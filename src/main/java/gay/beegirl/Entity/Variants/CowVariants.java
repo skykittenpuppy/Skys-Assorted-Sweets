@@ -1,7 +1,7 @@
 package gay.beegirl.Entity.Variants;
 
 import gay.beegirl.ModInit;
-import gay.beegirl.ModRegistries;
+import gay.beegirl.Registries.ModRegistries;
 import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.Registry;

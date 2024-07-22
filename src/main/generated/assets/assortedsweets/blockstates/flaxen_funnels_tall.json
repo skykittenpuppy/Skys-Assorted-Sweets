@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "assortedsweets:block/flaxen_funnels_tall_bottom"
+    },
+    "half=upper": {
+      "model": "assortedsweets:block/flaxen_funnels_tall_top"
+    }
+  }
+}

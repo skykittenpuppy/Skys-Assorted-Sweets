@@ -2,6 +2,8 @@ package gay.beegirl.Item;
 
 import gay.beegirl.Block.ModBlocks;
 import gay.beegirl.Entity.ModEntities;
+import gay.beegirl.Fluid.ModFluids;
+import gay.beegirl.ModFeatureFlags;
 import gay.beegirl.ModInit;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.FoodComponent;
@@ -24,7 +26,7 @@ public class ModItems {
         }
         return Registry.register(
                 Registries.ITEM,
-                Identifier.tryParse(ModInit.MOD_ID, name),
+                Identifier.of(ModInit.MOD_ID, name),
                 item
         );
     }
@@ -58,4 +60,6 @@ public class ModItems {
     public static final Item CITRINE = registerItem("citrine", new Item(new Item.Settings()));
     public static final Item ALEXANDRITE = registerItem("alexandrite", new Item(new Item.Settings()));
     public static final Item SPINEL = registerItem("spinel", new Item(new Item.Settings()));
+
+    public static final Item VOID_BUCKET = registerItem("void_bucket", new BucketItem(ModFluids.VOID, new Item.Settings().requires(ModFeatureFlags.ECHOING_VOID)));
 }

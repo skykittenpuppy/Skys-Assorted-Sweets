@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "assortedsweets:block/bulbous_melody_tall_bottom"
+    },
+    "half=upper": {
+      "model": "assortedsweets:block/bulbous_melody_tall_top"
+    }
+  }
+}

@@ -197,5 +197,73 @@
   "trim_material.assortedsweets.citrine": "Citrine",
   "trim_material.assortedsweets.alexandrite": "Alexandrite",
   "trim_material.assortedsweets.spinel": "Spinel",
-  "trim_pattern.assortedsweets.tool": "Tool Trim"
+  "trim_pattern.assortedsweets.tool": "Tool Trim",
+
+
+  "itemGroup.assortedsweets.echoing_void": "Echoing Void (WIP)",
+
+  "block.assortedsweets.abyssalt": "Abyssalt",
+  "block.assortedsweets.abyssalt_bricks": "Abyssalt Bricks",
+  "block.assortedsweets.abyssalt_edgehanger_frame": "Edgehanger Framed Abyssalt",
+  "block.assortedsweets.abyssalt_harmonic_frame": "Harmonic Framed Abyssalt",
+
+  "block.assortedsweets.edgehanger_leaves": "Edgehanger Leaves",
+  "block.assortedsweets.edgehanger_log": "Edgehanger Log",
+  "block.assortedsweets.edgehanger_log_stripped": "Stripped Edgehanger Log",
+  "block.assortedsweets.edgehanger_planks": "Edgehanger Planks",
+  "block.assortedsweets.edgehanger_sapling": "Edgehanger Sapling",
+  "block.assortedsweets.edgehanger_fence": "Edgehanger Fence",
+  "block.assortedsweets.edgehanger_fence_gate": "Edgehanger Fence Gate",
+  "block.assortedsweets.edgehanger_door": "Edgehanger Door",
+
+  "block.assortedsweets.end_stone_bricks_cracked": "Cracked End Stone Bricks",
+  "block.assortedsweets.end_stone_chiseled": "Chiseled End Stone",
+  "block.assortedsweets.end_stone_pillar": "End Stone Pillar",
+  "block.assortedsweets.end_stone_smooth": "Smooth End Stone",
+  "block.assortedsweets.end_stone_tiles": "End Stone Tiles",
+  "block.assortedsweets.end_stone_tiles_cracked": "Cracked End Stone Tiles",
+  "block.assortedsweets.end_stone_edgehanger_pillar": "Edgehanger End Stone Pillar",
+  "block.assortedsweets.end_stone_harmonic_pillar": "Harmonic End Stone Pillar",
+  "block.assortedsweets.end_stone_edgehanger_frame": "Edgehanger Framed End Stone",
+  "block.assortedsweets.end_stone_harmonic_frame": "Harmonic Framed End Stone",
+
+  "block.assortedsweets.endslate": "Endslate",
+  "block.assortedsweets.endslate_edgehanger_frame": "Edgehanger Framed Endslate",
+  "block.assortedsweets.endslate_harmonic_frame": "Harmonic Framed Endslate",
+
+  "block.assortedsweets.harmonic_leaves": "Harmonic Leaves",
+  "block.assortedsweets.harmonic_log": "Harmonic Log",
+  "block.assortedsweets.harmonic_log_stripped": "Stripped Harmonic Log",
+  "block.assortedsweets.harmonic_planks": "Harmonic Planks",
+  "block.assortedsweets.harmonic_sapling": "Harmonic Sapling",
+  "block.assortedsweets.harmonic_lattice": "Harmonic Lattice",
+  "block.assortedsweets.harmonic_door": "Harmonic Door",
+
+  "block.assortedsweets.prasine_block": "Block of Prasine",
+  "block.assortedsweets.prasine_engraved": "Engraved Prasine",
+  "block.assortedsweets.prasine_end_stone_pillar": "End Stone Prasine Pillar",
+
+  "block.assortedsweets.purpur_mosaic": "Purpur Mosaic",
+  "block.assortedsweets.purpur_tiles": "Purpur Tiles",
+
+  "block.assortedsweets.viridacite": "Viridacite",
+  "block.assortedsweets.viridacite_pillar": "Viridacite Pillar",
+  "block.assortedsweets.viridacite_edgehanger_frame": "Edgehanger Framed Viridacite",
+  "block.assortedsweets.viridacite_harmonic_frame": "Harmonic Framed Viridacite",
+
+  "block.assortedsweets.flaxen_ephyta": "Flaxen Ephyta",
+  "block.assortedsweets.lurid_ephyta": "Lurid Ephyta",
+
+  "block.assortedsweets.amber_shrub": "Amber Shrub",
+  "block.assortedsweets.amber_vine": "Amber Vine",
+  "block.assortedsweets.beige_grass": "Beige Grass",
+  "block.assortedsweets.blossoming_rhythm": "Blossoming Rhythm",
+  "block.assortedsweets.bulbous_melody_short": "Bulbous Melody",
+  "block.assortedsweets.bulbous_melody_tall": "Tall Bulbous Melody",
+  "block.assortedsweets.flaxen_funnels_short": "Flaxen Funnels",
+  "block.assortedsweets.flaxen_funnels_tall": "Tall Flaxen Funnels",
+  "block.assortedsweets.flowering_void": "Flowering Void",
+  "block.assortedsweets.tawny_fern_short": "Tawny Fern",
+  "block.assortedsweets.tawny_fern_tall": "Tall Tawny Fern",
+  "block.assortedsweets.void_stalks": "Void Stalks"
 }

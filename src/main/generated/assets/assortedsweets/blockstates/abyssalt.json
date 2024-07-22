@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "assortedsweets:block/abyssalt_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "assortedsweets:block/abyssalt"
+    },
+    "axis=z": {
+      "model": "assortedsweets:block/abyssalt_horizontal",
+      "x": 90
+    }
+  }
+}

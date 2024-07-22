@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "assortedsweets:block/end_stone_harmonic_pillar_top",
+    "side": "assortedsweets:block/end_stone_harmonic_pillar_side"
+  }
+}

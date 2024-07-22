@@ -3,7 +3,7 @@ package gay.beegirl.Mixin;
 import gay.beegirl.Entity.Variants.CowVariant;
 import gay.beegirl.Entity.Variants.CowVariants;
 import gay.beegirl.Generics.IVariantMixinEntity;
-import gay.beegirl.ModRegistries;
+import gay.beegirl.Registries.ModRegistries;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;

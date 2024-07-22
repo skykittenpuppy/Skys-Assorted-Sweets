@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.*;
 import net.minecraft.data.client.*;
 import net.minecraft.data.client.BlockStateModelGenerator.TintType;
+import net.minecraft.item.Item;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.NotNull;
@@ -166,6 +167,70 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.LAVENDER_CROP, TintType.NOT_TINTED, TorchflowerBlock.AGE, 0,1,2);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LAVENDER, ModBlocks.POTTED_LAVENDER, TintType.NOT_TINTED);
         blockStateModelGenerator.registerCrop(ModBlocks.VANILLA_CROP, CropBlock.AGE, 0,0,1,1,2,2,2,3);
+
+
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.ABYSSALT, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABYSSALT_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABYSSALT_EDGEHANGER_FRAME);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABYSSALT_HARMONIC_FRAME);
+
+        registerBushyLeavesBlock(blockStateModelGenerator, ModBlocks.EDGEHANGER_LEAVES);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.EDGEHANGER_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.EDGEHANGER_LOG_STRIPPED, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.EDGEHANGER_PLANKS);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.EDGEHANGER_SAPLING, ModBlocks.POTTED_EDGEHANGER_SAPLING, TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoor(ModBlocks.EDGEHANGER_DOOR);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_STONE_BRICKS_CRACKED);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_STONE_CHISELED);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.END_STONE_PILLAR, TexturedModel.CUBE_COLUMN, TexturedModel.CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_STONE_SMOOTH);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_STONE_TILES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_STONE_TILES_CRACKED);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.END_STONE_EDGEHANGER_PILLAR, TexturedModel.CUBE_COLUMN, TexturedModel.CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.END_STONE_HARMONIC_PILLAR, TexturedModel.CUBE_COLUMN, TexturedModel.CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_STONE_EDGEHANGER_FRAME);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_STONE_HARMONIC_FRAME);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENDSLATE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENDSLATE_EDGEHANGER_FRAME);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENDSLATE_HARMONIC_FRAME);
+
+        registerBushyLeavesBlock(blockStateModelGenerator, ModBlocks.HARMONIC_LEAVES);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.HARMONIC_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.HARMONIC_LOG_STRIPPED, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HARMONIC_PLANKS);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.HARMONIC_SAPLING, ModBlocks.POTTED_HARMONIC_SAPLING, TintType.NOT_TINTED);
+        registerLatticeBlock(blockStateModelGenerator, ModBlocks.HARMONIC_LATTICE);
+        blockStateModelGenerator.registerDoor(ModBlocks.HARMONIC_DOOR);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PRASINE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PRASINE_ENGRAVED);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.PRASINE_END_STONE_PILLAR, TexturedModel.CUBE_COLUMN, TexturedModel.CUBE_COLUMN_HORIZONTAL);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PURPUR_MOSAIC);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PURPUR_TILES);
+
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.VIRIDACITE, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.VIRIDACITE_PILLAR, TexturedModel.CUBE_COLUMN, TexturedModel.CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VIRIDACITE_EDGEHANGER_FRAME);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VIRIDACITE_HARMONIC_FRAME);
+
+        registerBaseBottomCustomTop(blockStateModelGenerator, ModBlocks.FLAXEN_EPHYTA, Blocks.END_STONE);
+        registerBaseBottomCustomTop(blockStateModelGenerator, ModBlocks.LURID_EPHYTA, ModBlocks.VIRIDACITE);
+
+        blockStateModelGenerator.registerTintableCross(ModBlocks.AMBER_SHRUB, TintType.NOT_TINTED);
+        blockStateModelGenerator.registerWallPlant(ModBlocks.AMBER_VINE);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.BEIGE_GRASS, TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.BLOSSOMING_RHYTHM, TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.BULBOUS_MELODY_SHORT, TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.BULBOUS_MELODY_TALL, TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.FLAXEN_FUNNELS_SHORT, TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.FLAXEN_FUNNELS_TALL, TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.FLOWERING_VOID, TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.TAWNY_FERN_SHORT, TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.TAWNY_FERN_TALL, TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.VOID_STALKS, TintType.NOT_TINTED);
     }
 
     @Override
@@ -204,6 +269,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CITRINE, Models.GENERATED);
         itemModelGenerator.register(ModItems.ALEXANDRITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SPINEL, Models.GENERATED);
+
+        //itemModelGenerator.register(ModBlocks.AMBER_VINE.asItem(), Models.GENERATED);
+        //itemModelGenerator.register(ModBlocks.EDGEHANGER_DOOR.asItem(), Models.GENERATED);
+        //itemModelGenerator.register(ModBlocks.FLOWERING_VOID.asItem(), Models.GENERATED);
+        //itemModelGenerator.register(ModBlocks.HARMONIC_DOOR.asItem(), Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.VOID_BUCKET, Models.GENERATED);
     }
 
     private static final Model SPAWN_EGG = new Model(Optional.of(Identifier.ofVanilla("item/template_spawn_egg")), Optional.empty());
@@ -254,25 +326,36 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerParentedItemModel(ore, oreOnModelID);
     }
 
-    /*private BlockStateProvider registerPlaceableFood(PlaceableFoodBlock block, Property<Integer> ageProperty, int... ageModelIndices){
-        if (ageProperty.getValues().size() != ageModelIndices.length) {
-            int[] temp = new int[ageProperty.getValues().size()];
-            Arrays.fill(temp, block.MAX_BITES);
-            System.arraycopy(ageModelIndices, 0, temp, 0, ageModelIndices.length);
-            ageModelIndices = temp;
-        }
-        return MultipartBlockStateSupplier.create(block)
-                .with(When.create().set(ageProperty, 0),
-                        BlockStateVariant.create()
-                                .put(VariantSettings.MODEL, )
-                .with(When.create().set(ageProperty, 1),
-                        BlockStateVariant.create()
-                                .put(VariantSettings.MODEL, )
-                .with(When.create().set(ageProperty, 2),
-                        BlockStateVariant.create()
-                                .put(VariantSettings.MODEL, )
-                .with(When.create().set(ageProperty, 3),
-                        BlockStateVariant.create()
-                                .put(VariantSettings.MODEL, ));
-    }*/
+    private void registerBushyLeavesBlock(@NotNull BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        Identifier bushyLeavesModel = new Model(
+                Optional.of(Identifier.of(ModInit.MOD_ID, "block/template_leaves_bushy")),
+                Optional.empty(),
+                TextureKey.ALL, TextureKey.SIDE)
+                .upload(
+                        block,
+                        new TextureMap()
+                                .put(TextureKey.ALL, TextureMap.getId(block))
+                                .put(TextureKey.SIDE, TextureMap.getSubId(block, "_bushy")),
+                        blockStateModelGenerator.modelCollector
+                );
+
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, bushyLeavesModel));
+    }
+    private void registerBaseBottomCustomTop(@NotNull BlockStateModelGenerator blockStateModelGenerator, Block block, Block base) {
+        TextureMap textureMap = (new TextureMap()).put(TextureKey.BOTTOM, TextureMap.getId(base)).put(TextureKey.TOP, TextureMap.getId(block)).put(TextureKey.SIDE, TextureMap.getSubId(block, "_side"));
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, Models.CUBE_BOTTOM_TOP.upload(block, textureMap, blockStateModelGenerator.modelCollector)));
+    }
+    private void registerLatticeBlock(@NotNull BlockStateModelGenerator blockStateModelGenerator, Block lattice) {
+        TextureMap textureMap = new TextureMap()
+                .put(TextureKey.PANE, TextureMap.getId(lattice))
+                .put(TextureKey.EDGE, TextureMap.getSubId(lattice, "_top"));
+        Identifier identifier = Models.TEMPLATE_GLASS_PANE_POST.upload(lattice, textureMap, blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = Models.TEMPLATE_GLASS_PANE_SIDE.upload(lattice, textureMap, blockStateModelGenerator.modelCollector);
+        Identifier identifier3 = Models.TEMPLATE_GLASS_PANE_SIDE_ALT.upload(lattice, textureMap, blockStateModelGenerator.modelCollector);
+        Identifier identifier4 = Models.TEMPLATE_GLASS_PANE_NOSIDE.upload(lattice, textureMap, blockStateModelGenerator.modelCollector);
+        Identifier identifier5 = Models.TEMPLATE_GLASS_PANE_NOSIDE_ALT.upload(lattice, textureMap, blockStateModelGenerator.modelCollector);
+        Item item = lattice.asItem();
+        Models.GENERATED.upload(ModelIds.getItemModelId(item), TextureMap.layer0(lattice), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(MultipartBlockStateSupplier.create(lattice).with(BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).with(When.create().set(Properties.NORTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier2)).with(When.create().set(Properties.EAST, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier2).put(VariantSettings.Y, VariantSettings.Rotation.R90)).with(When.create().set(Properties.SOUTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier3)).with(When.create().set(Properties.WEST, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier3).put(VariantSettings.Y, VariantSettings.Rotation.R90)).with(When.create().set(Properties.NORTH, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier4)).with(When.create().set(Properties.EAST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier5)).with(When.create().set(Properties.SOUTH, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier5).put(VariantSettings.Y, VariantSettings.Rotation.R90)).with(When.create().set(Properties.WEST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier4).put(VariantSettings.Y, VariantSettings.Rotation.R270)));
+    }
 }

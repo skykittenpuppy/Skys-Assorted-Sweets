@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "assortedsweets:block/end_stone_edgehanger_pillar_top",
+    "side": "assortedsweets:block/end_stone_edgehanger_pillar_side"
+  }
+}

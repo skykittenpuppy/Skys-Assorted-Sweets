@@ -1,5 +1,6 @@
 package gay.beegirl.Block;
 
+import gay.beegirl.Fluid.ModFluids;
 import gay.beegirl.ModFeatureFlags;
 import gay.beegirl.ModInit;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
@@ -324,5 +325,127 @@ public class ModBlocks {
     public static final Block DEEPSLATE_SPINEL_ORE = registerBlock("deepslate_spinel_ore", new Block(AbstractBlock.Settings.copy(Blocks.DEEPSLATE)), true);
     public static final Block TUFF_SPINEL_ORE = registerBlock("tuff_spinel_ore", new Block(AbstractBlock.Settings.copy(Blocks.TUFF)), true);
 
-    public static final Block TESTING = registerBlock("testing", new Block(AbstractBlock.Settings.copy(Blocks.STONE).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block ABYSSALT = registerBlock("abyssalt",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.BASALT).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block ABYSSALT_BRICKS = registerBlock("abyssalt_bricks",
+            new Block(AbstractBlock.Settings.copy(Blocks.BASALT).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block ABYSSALT_EDGEHANGER_FRAME = registerBlock("abyssalt_edgehanger_frame",
+            new Block(AbstractBlock.Settings.copy(Blocks.BASALT).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block ABYSSALT_HARMONIC_FRAME = registerBlock("abyssalt_harmonic_frame",
+            new Block(AbstractBlock.Settings.copy(Blocks.BASALT).requires(ModFeatureFlags.ECHOING_VOID)), true);
+
+    public static final Block EDGEHANGER_LEAVES = registerBlock("edgehanger_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.AZALEA_LEAVES).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block EDGEHANGER_LOG = registerBlock("edgehanger_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.SPRUCE_LOG).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block EDGEHANGER_LOG_STRIPPED = registerBlock("edgehanger_log_stripped",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.SPRUCE_LOG).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block EDGEHANGER_PLANKS = registerBlock("edgehanger_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block EDGEHANGER_SAPLING = registerBlock("edgehanger_sapling",
+            new SaplingBlock(SaplingGenerator.OAK, AbstractBlock.Settings.copy(Blocks.SPRUCE_SAPLING).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block POTTED_EDGEHANGER_SAPLING = registerBlock("potted_edgehanger_sapling", new FlowerPotBlock(EDGEHANGER_SAPLING, AbstractBlock.Settings.create().requires(ModFeatureFlags.ECHOING_VOID).breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY)), false);
+    public static final Block EDGEHANGER_FENCE = registerBlock("edgehanger_fence",
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.SPRUCE_FENCE).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block EDGEHANGER_FENCE_GATE = registerBlock("edgehanger_fence_gate",
+            new FenceGateBlock(WoodType.SPRUCE, AbstractBlock.Settings.copy(Blocks.SPRUCE_FENCE_GATE).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block EDGEHANGER_DOOR = registerBlock("edgehanger_door",
+            new DoorBlock(BlockSetType.SPRUCE, AbstractBlock.Settings.copy(Blocks.SPRUCE_DOOR).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+
+    public static final Block END_STONE_BRICKS_CRACKED = registerBlock("end_stone_bricks_cracked",
+            new Block(AbstractBlock.Settings.copy(Blocks.END_STONE_BRICKS).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block END_STONE_CHISELED = registerBlock("end_stone_chiseled",
+            new Block(AbstractBlock.Settings.copy(Blocks.END_STONE_BRICKS).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block END_STONE_PILLAR = registerBlock("end_stone_pillar",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.END_STONE_BRICKS).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block END_STONE_SMOOTH = registerBlock("end_stone_smooth",
+            new Block(AbstractBlock.Settings.copy(Blocks.END_STONE).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block END_STONE_TILES = registerBlock("end_stone_tiles",
+            new Block(AbstractBlock.Settings.copy(Blocks.END_STONE_BRICKS).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block END_STONE_TILES_CRACKED = registerBlock("end_stone_tiles_cracked",
+            new Block(AbstractBlock.Settings.copy(Blocks.END_STONE_BRICKS).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block END_STONE_EDGEHANGER_PILLAR = registerBlock("end_stone_edgehanger_pillar",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.END_STONE_BRICKS).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block END_STONE_HARMONIC_PILLAR = registerBlock("end_stone_harmonic_pillar",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.END_STONE_BRICKS).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block END_STONE_EDGEHANGER_FRAME = registerBlock("end_stone_edgehanger_frame",
+            new Block(AbstractBlock.Settings.copy(Blocks.END_STONE_BRICKS).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block END_STONE_HARMONIC_FRAME = registerBlock("end_stone_harmonic_frame",
+            new Block(AbstractBlock.Settings.copy(Blocks.END_STONE_BRICKS).requires(ModFeatureFlags.ECHOING_VOID)), true);
+
+    public static final Block ENDSLATE = registerBlock("endslate",
+            new Block(AbstractBlock.Settings.copy(Blocks.STONE).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block ENDSLATE_EDGEHANGER_FRAME = registerBlock("endslate_edgehanger_frame",
+            new Block(AbstractBlock.Settings.copy(Blocks.STONE).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block ENDSLATE_HARMONIC_FRAME = registerBlock("endslate_harmonic_frame",
+            new Block(AbstractBlock.Settings.copy(Blocks.STONE).requires(ModFeatureFlags.ECHOING_VOID)), true);
+
+    public static final Block HARMONIC_LEAVES = registerBlock("harmonic_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.AZALEA_LEAVES).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block HARMONIC_LOG = registerBlock("harmonic_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.SPRUCE_LOG).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block HARMONIC_LOG_STRIPPED = registerBlock("harmonic_log_stripped",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.SPRUCE_LOG).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block HARMONIC_PLANKS = registerBlock("harmonic_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block HARMONIC_SAPLING = registerBlock("harmonic_sapling",
+            new SaplingBlock(SaplingGenerator.OAK, AbstractBlock.Settings.copy(Blocks.SPRUCE_SAPLING).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block POTTED_HARMONIC_SAPLING = registerBlock("potted_harmonic_sapling", new FlowerPotBlock(HARMONIC_SAPLING, AbstractBlock.Settings.create().requires(ModFeatureFlags.ECHOING_VOID).breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY)), false);
+    public static final Block HARMONIC_LATTICE = registerBlock("harmonic_lattice",
+            new PaneBlock(AbstractBlock.Settings.copy(Blocks.SPRUCE_FENCE).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block HARMONIC_DOOR = registerBlock("harmonic_door",
+            new DoorBlock(BlockSetType.SPRUCE, AbstractBlock.Settings.copy(Blocks.SPRUCE_DOOR).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+
+    public static final Block PRASINE_BLOCK = registerBlock("prasine_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block PRASINE_ENGRAVED = registerBlock("prasine_engraved",
+            new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block PRASINE_END_STONE_PILLAR = registerBlock("prasine_end_stone_pillar",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).requires(ModFeatureFlags.ECHOING_VOID)), true);
+
+    public static final Block PURPUR_MOSAIC = registerBlock("purpur_mosaic",
+            new Block(AbstractBlock.Settings.copy(Blocks.PURPUR_BLOCK).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block PURPUR_TILES = registerBlock("purpur_tiles",
+            new Block(AbstractBlock.Settings.copy(Blocks.PURPUR_BLOCK).requires(ModFeatureFlags.ECHOING_VOID)), true);
+
+    public static final Block VIRIDACITE = registerBlock("viridacite",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.CALCITE).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block VIRIDACITE_PILLAR = registerBlock("viridacite_pillar",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.CALCITE).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block VIRIDACITE_EDGEHANGER_FRAME = registerBlock("viridacite_edgehanger_frame",
+            new Block(AbstractBlock.Settings.copy(Blocks.CALCITE).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block VIRIDACITE_HARMONIC_FRAME = registerBlock("viridacite_harmonic_frame",
+            new Block(AbstractBlock.Settings.copy(Blocks.CALCITE).requires(ModFeatureFlags.ECHOING_VOID)), true);
+
+    public static final Block FLAXEN_EPHYTA = registerBlock("flaxen_ephyta",
+            new EphytaBlock(AbstractBlock.Settings.copy(Blocks.CRIMSON_NYLIUM).requires(ModFeatureFlags.ECHOING_VOID)), true);
+    public static final Block LURID_EPHYTA = registerBlock("lurid_ephyta",
+            new EphytaBlock(AbstractBlock.Settings.copy(Blocks.CRIMSON_NYLIUM).requires(ModFeatureFlags.ECHOING_VOID)), true);
+
+    public static final Block AMBER_SHRUB = registerBlock("amber_shrub",
+            new FlowerBlock(StatusEffects.LUCK, 0, AbstractBlock.Settings.copy(Blocks.SHORT_GRASS).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block AMBER_VINE = registerBlock("amber_vine",
+            new VineBlock(AbstractBlock.Settings.copy(Blocks.VINE).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block BEIGE_GRASS = registerBlock("beige_grass",
+            new FlowerBlock(StatusEffects.LUCK, 0, AbstractBlock.Settings.copy(Blocks.SHORT_GRASS).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block BLOSSOMING_RHYTHM = registerBlock("blossoming_rhythm",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.ROSE_BUSH).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block BULBOUS_MELODY_SHORT = registerBlock("bulbous_melody_short",
+            new FlowerBlock(StatusEffects.LUCK, 0, AbstractBlock.Settings.copy(Blocks.SHORT_GRASS).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block BULBOUS_MELODY_TALL = registerBlock("bulbous_melody_tall",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.ROSE_BUSH).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block FLAXEN_FUNNELS_SHORT = registerBlock("flaxen_funnels_short",
+            new FlowerBlock(StatusEffects.LUCK, 0, AbstractBlock.Settings.copy(Blocks.SHORT_GRASS).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block FLAXEN_FUNNELS_TALL = registerBlock("flaxen_funnels_tall",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.ROSE_BUSH).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block FLOWERING_VOID = registerBlock("flowering_void",
+            new FlowerBlock(StatusEffects.LUCK, 0, AbstractBlock.Settings.copy(Blocks.SHORT_GRASS).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block TAWNY_FERN_SHORT = registerBlock("tawny_fern_short",
+            new FlowerBlock(StatusEffects.LUCK, 0, AbstractBlock.Settings.copy(Blocks.SHORT_GRASS).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block TAWNY_FERN_TALL = registerBlock("tawny_fern_tall",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.ROSE_BUSH).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+    public static final Block VOID_STALKS = registerBlock("void_stalks",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.ROSE_BUSH).requires(ModFeatureFlags.ECHOING_VOID).nonOpaque()), true);
+
+    public static final Block VOID = registerBlock("void", new FluidBlock(ModFluids.VOID, AbstractBlock.Settings.create().replaceable().noCollision().strength(100.0F).pistonBehavior(PistonBehavior.DESTROY).dropsNothing().liquid().sounds(BlockSoundGroup.INTENTIONALLY_EMPTY)), false);
 }

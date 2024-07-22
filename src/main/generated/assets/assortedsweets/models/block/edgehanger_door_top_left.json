@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "textures": {
+    "bottom": "assortedsweets:block/edgehanger_door_bottom",
+    "top": "assortedsweets:block/edgehanger_door_top"
+  }
+}

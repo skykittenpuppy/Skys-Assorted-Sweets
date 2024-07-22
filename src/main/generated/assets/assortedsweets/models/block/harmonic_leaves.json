@@ -1,0 +1,7 @@
+{
+  "parent": "assortedsweets:block/template_leaves_bushy",
+  "textures": {
+    "all": "assortedsweets:block/harmonic_leaves",
+    "side": "assortedsweets:block/harmonic_leaves_bushy"
+  }
+}

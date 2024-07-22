@@ -1,7 +1,9 @@
-package gay.beegirl;
+package gay.beegirl.Registries;
 
+import gay.beegirl.Block.ModBlocks;
 import gay.beegirl.Entity.Variants.*;
 import net.fabricmc.fabric.api.event.registry.DynamicRegistries;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.entity.data.TrackedDataHandler;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -31,5 +33,10 @@ public class ModRegistries {
         DynamicRegistries.registerSynced(PIG_VARIANT_KEY, PigVariant.CODEC);
         DynamicRegistries.registerSynced(RABBIT_VARIANT_KEY, RabbitVariant.CODEC);
         DynamicRegistries.registerSynced(SHEEP_VARIANT_KEY, SheepVariant.CODEC);
+    }
+
+    public static void registerStrippables() {
+        StrippableBlockRegistry.register(ModBlocks.EDGEHANGER_LOG, ModBlocks.EDGEHANGER_LOG_STRIPPED);
+        StrippableBlockRegistry.register(ModBlocks.HARMONIC_LOG, ModBlocks.HARMONIC_LOG_STRIPPED);
     }
 }

@@ -1,0 +1,92 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "assortedsweets:block/amber_vine",
+		"vine": "assortedsweets:block/amber_vine",
+		"leaves": "assortedsweets:block/amber_vine_leaves"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0.8],
+			"to": [16, 16, 0.8],
+			"shade": false,
+			"faces": {
+				"north": {"uv": [16, 0, 0, 16], "texture": "#vine"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#vine"}
+			}
+		},
+		{
+			"from": [0, 0, 1],
+			"to": [16, 2, 1],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [0, 2, 1]},
+			"faces": {
+				"north": {"uv": [16, 14, 0, 16], "texture": "#leaves"},
+				"south": {"uv": [0, 14, 16, 16], "texture": "#leaves"}
+			}
+		},
+		{
+			"from": [0, 1, 1],
+			"to": [16, 4, 1],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [0, 4, 1]},
+			"faces": {
+				"north": {"uv": [16, 12, 0, 15], "texture": "#leaves"},
+				"south": {"uv": [0, 12, 16, 15], "texture": "#leaves"}
+			}
+		},
+		{
+			"from": [0, 3, 1],
+			"to": [16, 6, 1],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [0, 6, 1]},
+			"faces": {
+				"north": {"uv": [16, 10, 0, 13], "texture": "#leaves"},
+				"south": {"uv": [0, 10, 16, 13], "texture": "#leaves"}
+			}
+		},
+		{
+			"from": [0, 5, 1],
+			"to": [16, 8, 1],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [0, 8, 1]},
+			"faces": {
+				"north": {"uv": [16, 8, 0, 11], "texture": "#leaves"},
+				"south": {"uv": [0, 8, 16, 11], "texture": "#leaves"}
+			}
+		},
+		{
+			"from": [0, 7, 1],
+			"to": [16, 10, 1],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [0, 10, 1]},
+			"faces": {
+				"north": {"uv": [16, 6, 0, 9], "texture": "#leaves"},
+				"south": {"uv": [0, 6, 16, 9], "texture": "#leaves"}
+			}
+		},
+		{
+			"from": [0, 9, 1],
+			"to": [16, 12, 1],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [0, 12, 1]},
+			"faces": {
+				"north": {"uv": [16, 4, 0, 7], "texture": "#leaves"},
+				"south": {"uv": [0, 4, 16, 7], "texture": "#leaves"}
+			}
+		},
+		{
+			"from": [0, 11, 1],
+			"to": [16, 14, 1],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [0, 14, 1]},
+			"faces": {
+				"north": {"uv": [16, 2, 0, 5], "texture": "#leaves"},
+				"south": {"uv": [0, 2, 16, 5], "texture": "#leaves"}
+			}
+		},
+		{
+			"from": [0, 13, 1],
+			"to": [16, 16, 1],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [0, 16, 1]},
+			"faces": {
+				"north": {"uv": [16, 0, 0, 3], "texture": "#leaves"},
+				"south": {"uv": [0, 0, 16, 3], "texture": "#leaves"}
+			}
+		}
+	]
+}

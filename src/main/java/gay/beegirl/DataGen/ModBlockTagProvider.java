@@ -162,5 +162,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).addTag(ALEXANDRITE_ORES);
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).addTag(SPINEL_ORES);
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).addTag(WHITE_QUARTZ_ORES);
+
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.EDGEHANGER_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(ModBlocks.EDGEHANGER_FENCE);
     }
 }

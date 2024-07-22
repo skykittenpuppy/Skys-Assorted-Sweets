@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "assortedsweets:block/tawny_fern_tall_bottom"
+    },
+    "half=upper": {
+      "model": "assortedsweets:block/tawny_fern_tall_top"
+    }
+  }
+}

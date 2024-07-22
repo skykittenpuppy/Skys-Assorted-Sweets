@@ -1,7 +1,7 @@
 package gay.beegirl.DataGen;
 
 import gay.beegirl.Entity.Variants.*;
-import gay.beegirl.ModRegistries;
+import gay.beegirl.Registries.ModRegistries;
 import gay.beegirl.World.ModConfiguredFeatures;
 import gay.beegirl.World.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;

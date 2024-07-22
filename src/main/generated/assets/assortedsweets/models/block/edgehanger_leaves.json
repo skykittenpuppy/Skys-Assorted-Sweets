@@ -1,0 +1,7 @@
+{
+  "parent": "assortedsweets:block/template_leaves_bushy",
+  "textures": {
+    "all": "assortedsweets:block/edgehanger_leaves",
+    "side": "assortedsweets:block/edgehanger_leaves_bushy"
+  }
+}

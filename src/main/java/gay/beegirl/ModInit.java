@@ -5,6 +5,7 @@ import gay.beegirl.Entity.ModEntities;
 import gay.beegirl.Entity.ModEntityGeneration;
 import gay.beegirl.Item.ModItemGroups;
 import gay.beegirl.Item.ModItems;
+import gay.beegirl.Registries.ModRegistries;
 import gay.beegirl.Sound.ModSoundEvents;
 import gay.beegirl.World.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -24,5 +25,7 @@ public class ModInit implements ModInitializer {
 		ModSoundEvents.registerModSoundEvents();
 		ModWorldGeneration.registerModWorldGeneration();
 		ModEntityGeneration.registerModEntityGeneration();
+
+		ModRegistries.registerStrippables();
 	}
 }
