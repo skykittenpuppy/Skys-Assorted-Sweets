@@ -1,0 +1,8 @@
+[Dolphin]
+SortRole=artist
+Timestamp=2023,8,14,22,52,9.69
+Version=4
+VisibleRoles=Details_text,Details_size,Details_modificationtime,Details_type,Details_artist,CustomizedDetails
+
+[Settings]
+HiddenFilesShown=true
